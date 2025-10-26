@@ -17,8 +17,74 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
-body main h2 {
+body main {
+  margin: 0% auto;
+  width: 798px;
+}
+body main .nta_main-wrap .nta_education-service {
+  display: flex;
+  flex-direction: column;
+}
+body main .nta_main-wrap .nta_education-service h2 {
   font-family: "GothamPro-Bold", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
+  text-align: center;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-up {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-up .education-service__card {
+  border: 0px solid #000;
+  border-radius: 20px;
+  width: 246px;
+  height: 246px;
+  background: #fae4da;
+  padding-left: 21px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-up .education-service__card img {
+  margin-top: 20px;
+  width: 38px;
+  height: 38px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-up .education-service__card p {
+  font-family: "GothamPro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin-top: 13px;
+  width: 193px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-under {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-under .education-service__card {
+  border: 0px solid #000;
+  border-radius: 20px;
+  width: 246px;
+  height: 246px;
+  background: #d8e2d9;
+  padding-left: 21px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-under .education-service__card img {
+  margin-top: 20px;
+  width: 38px;
+  height: 38px;
+}
+body main .nta_main-wrap .nta_education-service .education-service__wrapper .education-service__wrapper-under .education-service__card p {
+  font-family: "GothamPro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  margin-top: 13px;
+  width: 210px;
 }/*# sourceMappingURL=style.css.map */

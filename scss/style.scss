@@ -2,15 +2,90 @@
 @use 'variables' as *;
 
 body {
-  font-family: $font-primary;
-  font-weight: $fw-regular;
-  font-size: $fs-md;
+    font-family: $font-primary;
+    font-weight: $fw-regular;
+    font-size: $fs-md;
 
-  main {
-    h2 {
-      font-family: $font-secondary;
-      font-weight: $fw-bold;
-      font-size: $fs-xxl;
+    main {
+        margin: 0% auto;
+        width: 798px;
+
+        .nta_main-wrap {
+            .nta_education-service {
+                display: flex;
+                flex-direction: column;
+
+                h2 {
+                    font-family: $font-secondary;
+                    font-weight: $fw-bold;
+                    font-size: $fs-xl;
+                    text-align: center;
+                }
+
+                .education-service__wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+                    .education-service__wrapper-up {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 30px;
+
+                        .education-service__card {
+                            border: 0px solid #000;
+                            border-radius: 20px;
+                            width: 246px;
+                            height: 246px;
+                            background: #fae4da;
+                            padding-left: 21px;
+
+                            img {
+                                margin-top: 20px;
+                                width: 38px;
+                                height: 38px;
+                            }
+                            p {
+                                font-family: $font-primary;
+                                font-size: $fs-md;
+                                font-weight: $fw-regular;
+                                color: $gray;
+                                margin-top: 13px;
+                                width: 193px; 
+                            }
+                        }
+                    }
+
+                    .education-service__wrapper-under {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 30px;
+
+                        .education-service__card {
+                            border: 0px solid #000;
+                            border-radius: 20px;
+                            width: 246px;
+                            height: 246px;
+                           background: #d8e2d9;
+                            padding-left: 21px;
+
+                            img {
+                                margin-top: 20px;
+                                width: 38px;
+                                height: 38px;
+                            }
+                            p {
+                                font-family: $font-primary;
+                                font-size: $fs-md;
+                                font-weight: $fw-regular;
+                                color: $gray;
+                                margin-top: 13px;
+                                width: 210px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }
