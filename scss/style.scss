@@ -14,12 +14,15 @@ body {
             .nta_education-service {
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 61px;
 
                 h2 {
                     font-family: $font-secondary;
                     font-weight: $fw-bold;
                     font-size: $fs-xl;
+                    color: $gray;
                     text-align: center;
+                    margin-bottom: 48px;
                 }
 
                 .education-service__wrapper {
@@ -45,13 +48,14 @@ body {
                                 width: 38px;
                                 height: 38px;
                             }
+
                             p {
                                 font-family: $font-primary;
                                 font-size: $fs-md;
                                 font-weight: $fw-regular;
                                 color: $gray;
                                 margin-top: 13px;
-                                width: 193px; 
+                                width: 193px;
                             }
                         }
                     }
@@ -66,7 +70,7 @@ body {
                             border-radius: 20px;
                             width: 246px;
                             height: 246px;
-                           background: #d8e2d9;
+                            background: #d8e2d9;
                             padding-left: 21px;
 
                             img {
@@ -74,17 +78,52 @@ body {
                                 width: 38px;
                                 height: 38px;
                             }
+
                             p {
                                 font-family: $font-primary;
                                 font-size: $fs-md;
                                 font-weight: $fw-regular;
                                 color: $gray;
                                 margin-top: 13px;
-                                width: 210px; 
+                                width: 210px;
                             }
                         }
                     }
                 }
+            }
+
+            .nta_info-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .nta_info-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 56px;
+                    h2 {
+                        font-family: $font-secondary;
+                        font-weight: $fw-bold;
+                        font-size: $fs-xl;
+                        color: $gray;
+                    }
+
+                    p {
+                        font-family: $font-primary;
+                        font-size: $fs-md;
+                        font-weight: $fw-regular;
+                        color: $gray;
+                        text-align: center;
+                        width: 683px;
+                    }
+                }
+            }
+
+            .nta_info-line {
+                border: 1px solid #555;
+                width: 558px;
+                height: 0px;
+                color: $gray;
             }
         }
     }

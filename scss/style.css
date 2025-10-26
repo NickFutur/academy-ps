@@ -24,12 +24,15 @@ body main {
 body main .nta_main-wrap .nta_education-service {
   display: flex;
   flex-direction: column;
+  margin-bottom: 61px;
 }
 body main .nta_main-wrap .nta_education-service h2 {
   font-family: "GothamPro-Bold", sans-serif;
   font-weight: 700;
   font-size: 32px;
+  color: #555;
   text-align: center;
+  margin-bottom: 48px;
 }
 body main .nta_main-wrap .nta_education-service .education-service__wrapper {
   display: flex;
@@ -87,4 +90,35 @@ body main .nta_main-wrap .nta_education-service .education-service__wrapper .edu
   color: #555;
   margin-top: 13px;
   width: 210px;
+}
+body main .nta_main-wrap .nta_info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .nta_main-wrap .nta_info-block .nta_info-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 56px;
+}
+body main .nta_main-wrap .nta_info-block .nta_info-wrap h2 {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #555;
+}
+body main .nta_main-wrap .nta_info-block .nta_info-wrap p {
+  font-family: "GothamPro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  text-align: center;
+  width: 683px;
+}
+body main .nta_main-wrap .nta_info-line {
+  border: 1px solid #555;
+  width: 558px;
+  height: 0px;
+  color: #555;
 }/*# sourceMappingURL=style.css.map */
