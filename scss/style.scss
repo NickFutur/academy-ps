@@ -1,8 +1,16 @@
+@use 'fonts';
+@use 'variables' as *;
+
 body {
-    header{
-        
+  font-family: $font-primary;
+  font-weight: $fw-regular;
+  font-size: $fs-md;
+
+  main {
+    h2 {
+      font-family: $font-secondary;
+      font-weight: $fw-bold;
+      font-size: $fs-xxl;
     }
-    main {
-     
-    }
+  }
 }
