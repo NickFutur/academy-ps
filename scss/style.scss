@@ -1,16 +1,17 @@
 @use 'fonts';
-@use 'variables' as *;
+@use 'variables'as *;
+@forward "../scss/header";
 
 body {
-  font-family: $font-primary;
-  font-weight: $fw-regular;
-  font-size: $fs-md;
+    font-family: $font-primary;
+    font-weight: $fw-regular;
+    font-size: $fs-md;
 
-  main {
-    h2 {
-      font-family: $font-secondary;
-      font-weight: $fw-bold;
-      font-size: $fs-xxl;
+    main {
+        h2 {
+            font-family: $font-secondary;
+            font-weight: $fw-bold;
+            font-size: $fs-xxl;
+        }
     }
-  }
 }

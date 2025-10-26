@@ -1,0 +1,253 @@
+@use 'fonts';
+@use 'variables'as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.nta_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0px 38px 0px;
+
+    .nta_header-block {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1080px;
+        margin-bottom: 38px;
+
+        .nta_logo {
+            max-width: 363px;
+            max-height: 94px;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .nta_login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            p {
+                font-family: $font-primary;
+                font-weight: 400;
+                font-size: $fs-md;
+                color: #555;
+                margin: 0;
+            }
+
+            a {
+                border-radius: 100px;
+                width: 180px;
+                height: 46px;
+                background: #eb492a;
+                font-family: $font-primary;
+                font-weight: 400;
+                font-size: $fs-sm;
+                text-align: center;
+                color: #fff;
+                transition: $transition-def;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: #a21e05;
+                    transition: $transition-def;
+                }
+            }
+        }
+    }
+
+    .nta_main-slider {
+        margin-bottom: 27px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1080px;
+        height: 420px;
+        border-radius: 30px;
+
+        .nta_main-slider__swiper {
+            width: 100%;
+            height: 100%;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    width: 100%;
+                    height: 100%;
+                    background: #fff, rgba(0, 0, 0, 0.2);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .nta_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nta_main-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 17px;
+            padding: 0;
+
+            li {
+                list-style: none;
+                position: relative;
+
+                a {
+                    border: 0px solid #000;
+                    border-radius: 100px;
+                    padding: 16px 31px;
+                    width: 100%;
+                    background: #d5e2e9;
+                    height: 46px;
+                    text-decoration: none;
+                    font-family: $font-primary;
+                    font-weight: 400;
+                    font-size: $fs-sm;
+                    text-align: center;
+                    color: #555;
+                    transition: $transition-def;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: #fff2b0;
+                        transition: $transition-def;
+                    }
+                }
+            }
+
+            .nta_active-podmenu {
+                position: relative;
+
+                >a {
+                    // padding-right: 50px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+
+                        // background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkw4IDEwTDEyIDYiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transition: transform 0.3s ease;
+                    }
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    >a {
+                        background: #555;
+                        color: #fff;
+
+                        // Анимация стрелки при наведении
+                        &::after {
+                            right: 15px;
+                            top: 53%;
+                            transform: translateY(-50%);
+                            width: 16px;
+                            height: 16px;
+                            // transform: translateY(-50%) rotate(180deg);
+                            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkw4IDEwTDEyIDYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
+                        }
+                    }
+
+                    .nta_podmenu {
+                        display: flex;
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(8px);
+                    }
+                }
+
+                .nta_podmenu {
+                    display: flex;
+                    position: absolute;
+                    flex-direction: column;
+                    border: 0px solid #000;
+                    border-radius: 30px;
+                    padding: 16px 31px;
+                    width: 219px;
+                    height: auto;
+                    background: #d5e2e9;
+                    left: 0;
+                    gap: 8px;
+                    z-index: 1000;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-10px);
+                    transition: all $transition-def;
+
+                    li {
+                        a {
+                            font-family: $font-primary;
+                            font-weight: 400;
+                            font-size: $fs-sm;
+                            text-align: left;
+                            color: #555;
+                            text-decoration: none;
+                            border: none;
+                            border-radius: 0;
+                            background: none;
+                            padding: 0px;
+                            width: auto;
+                            height: auto;
+                            justify-content: flex-start;
+
+                            // Убираем стрелку у ссылок в подменю
+                            &::after {
+                                display: none;
+                            }
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                background: none;
+                                opacity: 0.4;
+                                transition: $transition-def;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
