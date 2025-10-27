@@ -324,4 +324,9 @@ body main .nta_main-wrap .nta_info-line {
   width: 558px;
   height: 0px;
   color: #555;
+}
+body main .nta_main-wrap h2 {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
 }/*# sourceMappingURL=style.css.map */
