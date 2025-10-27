@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+    <link rel="stylesheet" href="scss/reset.css">
     <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <script src="js/swiper-bundle.min.js" defer></script>
     <link rel="stylesheet" href="scss/style.css">
@@ -42,7 +43,7 @@
         </div>
         <nav class="nta_menu">
             <ul class="nta_main-menu">
-                <li><a href="#">Главная</a></li>
+                <li class="active"><a href="#">Главная</a></li>
                 <li><a href="#">Рабочие программы</a>
                 </li>
                 <li class="nta_active-podmenu"><a href="#">Предложения</a>
@@ -55,7 +56,12 @@
                     </ul>
                 </li>
                 <li><a href="#">Слушателям</a></li>
-                <li><a href="#">Наши ценности</a></li>
+                <li class="nta_active-podmenu"><a href="#">Наши ценности</a>
+                    <ul class="nta_podmenu">
+                        <li><a href="#">Наши партнеры</a></li>
+                        <li><a href="#">Наши преподаватели</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>

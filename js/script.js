@@ -9,3 +9,15 @@ const swiper = new Swiper('.nta_main-slider__swiper', {
         disableOnInteraction: false, // продолжать автоплей после взаимодействия пользователя
     },
 });
+
+const swiper_dop = new Swiper('.nta_dop-wrapper__slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // Autoplay
+    autoplay: {
+        delay: 4000, // 4 секунды
+        disableOnInteraction: false, // продолжать автоплей после взаимодействия пользователя
+    },
+});
