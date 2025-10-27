@@ -134,6 +134,7 @@ html {
 .nta_header .nta_menu .nta_main-menu li.active a {
   background: #555;
   color: #fff;
+  transition: all 0.3s ease;
 }
 .nta_header .nta_menu .nta_main-menu li a {
   border: 0px solid #000;
@@ -154,9 +155,14 @@ html {
   justify-content: center;
   position: relative;
 }
-.nta_header .nta_menu .nta_main-menu li a:hover, .nta_header .nta_menu .nta_main-menu li a:focus, .nta_header .nta_menu .nta_main-menu li a:active {
+.nta_header .nta_menu .nta_main-menu li a:hover {
   color: #555;
   background: #fff2b0;
+  transition: all 0.3s ease;
+}
+.nta_header .nta_menu .nta_main-menu li a:focus, .nta_header .nta_menu .nta_main-menu li a:active {
+  background: #555;
+  color: #fff;
   transition: all 0.3s ease;
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu {
@@ -227,13 +233,13 @@ html {
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a::after {
   display: none;
 }
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:hover, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:focus {
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:hover {
   background: none;
   color: #fff2b0;
   opacity: 1;
   transition: all 0.3s ease;
 }
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:active {
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:focus, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:active {
   background: none;
   opacity: 0.4;
   transition: all 0.3s ease;

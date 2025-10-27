@@ -141,6 +141,7 @@ html {
                     a {
                         background: #555;
                         color: #fff;
+                        transition: $transition-def;
                     }
 
                 }
@@ -164,13 +165,19 @@ html {
                     justify-content: center;
                     position: relative;
 
-                    &:hover,
-                    &:focus,
-                    &:active {
+                    &:hover {
                         color: $gray;
                         background: #fff2b0;
                         transition: $transition-def;
                     }
+
+                    &:focus,
+                    &:active {
+                        background: #555;
+                        color: #fff;
+                        transition: $transition-def;
+                    }
+
                 }
             }
 
@@ -264,14 +271,14 @@ html {
                                 display: none;
                             }
 
-                            &:hover,
-                            &:focus {
+                            &:hover {
                                 background: none;
                                 color: #fff2b0;
                                 opacity: 1;
                                 transition: $transition-def;
                             }
 
+                            &:focus,
                             &:active {
                                 background: none;
                                 opacity: 0.4;
