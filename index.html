@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js" defer></script>
     <link rel="stylesheet" href="scss/style.css">
     <script src="js/script.js" defer></script>
 </head>
@@ -16,17 +18,42 @@
                 <img src="img/logo.svg" alt="logo academy-ps">
             </div>
             <div class="nta_login">
-                <p>Логин кабинет:</p>
+                <p>Личный кабинет:</p>
                 <a href="">Войти</a>
             </div>
         </div>
-        <div class="nta_main-slider"></div>
+        <div class="nta_main-slider">
+            <div class="swiper nta_main-slider__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/title-image-1.png" alt="фото" srcset="img/title-image-1-2x.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/title-image-2.png" alt="фото" srcset="img/title-image-2-2x.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/title-image-3.png" alt="фото" srcset="img/title-image-3-2x.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/title-image-4.png" alt="фото" srcset="img/title-image-4-2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
         <nav class="nta_menu">
-            <ul>
+            <ul class="nta_main-menu">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">Рабочие программы</a>
                 </li>
-                <li><a href="#">Предложения</a></li>
+                <li class="nta_active-podmenu"><a href="#">Предложения</a>
+                    <ul class="nta_podmenu">
+                        <li><a href="#">Предложения</a></li>
+                        <li><a href="#">Рабочие программы</a></li>
+                        <li><a href="#">Слушителям</a></li>
+                        <li><a href="#">Наши ценности</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Слушателям</a></li>
                 <li><a href="#">Наши ценности</a></li>
                 <li><a href="#">Контакты</a></li>
@@ -34,7 +61,8 @@
         </nav>
     </header>
     <main>
-        <div class="nta_main-wrap"> <!-- буду делать этот блок-->
+        <div class="nta_main-wrap">
+            <!-- буду делать этот блок-->
             <div class="nta_education-service">
                 <h2>Платные образовательные услуги</h2>
                 <div class="education-service__wrapper">
