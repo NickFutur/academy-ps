@@ -7,12 +7,12 @@
     width: 100%;
     justify-content: center;
     max-width: 1080px;
+    gap: 30px;
     margin: 0 auto;
 
     .nta_dop-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 35px;
         width: 200px;
         overflow: hidden;
 
@@ -20,8 +20,6 @@
             width: 100%;
             max-width: 200px;
             height: 300px;
-
-
         }
 
         .nta_left-menu {

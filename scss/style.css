@@ -170,7 +170,11 @@ html {
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a::after {
   content: "";
-  position: absolute;
+  margin-left: 2px;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkw4IDEwTDEyIDYiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.3s ease;
@@ -180,9 +184,7 @@ html {
   color: #fff;
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover > a::after, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu:active > a::after, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu:focus > a::after {
-  right: 15px;
-  top: 53%;
-  transform: translateY(-50%);
+  position: relative;
   width: 16px;
   height: 16px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkw4IDEwTDEyIDYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
@@ -250,7 +252,7 @@ html {
   justify-content: center;
   margin-top: 64px;
   width: 100%;
-  margin-bottom: 165px;
+  margin-bottom: 65px;
 }
 .nta_footer-menu .nta_footer-menu__left-list {
   width: 100%;
@@ -296,12 +298,12 @@ html {
   width: 100%;
   justify-content: center;
   max-width: 1080px;
+  gap: 30px;
   margin: 0 auto;
 }
 .nta_double-wrap .nta_dop-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 35px;
   width: 200px;
   overflow: hidden;
 }
@@ -437,6 +439,7 @@ body main .nta_main-wrap .nta_info-block .nta_info-wrap h2 {
   font-weight: 700;
   font-size: 32px;
   color: #555;
+  margin-bottom: 21px;
 }
 body main .nta_main-wrap .nta_info-block .nta_info-wrap p {
   font-family: "GothamPro", sans-serif;
