@@ -1,0 +1,55 @@
+@use 'fonts';
+@use 'variables'as *;
+
+.nta_footer-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    width: 100%;
+
+    .nta_footer-menu__left-list {
+        width: 100%;
+        max-width: 731px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+
+        li {
+            width: 50%;
+            max-width: 337px;
+            min-width: 150px;
+            box-sizing: border-box;
+
+
+            &:nth-child(odd) {
+                padding-right: 10px;
+                padding-left: 10px;
+                margin-bottom: 30px;
+            }
+
+            &:nth-child(even) {
+                padding-right: 10px;
+                padding-left: 10px;
+                margin-bottom: 33px;
+            }
+
+            a {
+                text-decoration: none;
+                font-family: $font-primary;
+                font-weight: 400;
+                font-size: $fs-md;
+                color: $gray;
+                transition: $transition-def;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    opacity: 0.4;
+                    transition: $transition-def;
+                }
+            }
+        }
+    }
+}

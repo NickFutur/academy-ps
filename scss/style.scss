@@ -1,6 +1,7 @@
 @use 'fonts';
 @use 'variables'as *;
 @forward "../scss/header";
+@forward "../scss/footer";
 
 body {
     font-family: $font-primary;
