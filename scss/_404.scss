@@ -17,6 +17,8 @@
                 font-size: 128px;
                 text-align: center;
                 color: $gray;
+                margin-bottom: 0px;
+                line-height: normal;
             }
 
             p {
@@ -27,6 +29,8 @@
                 color: $gray;
                 width: 100%;
                 max-width: 428px;
+                line-height: normal;
+                margin-bottom: 0px;
             }
 
             a {
@@ -45,6 +49,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                line-height: normal;
 
                 &:hover {
                     background: #a21e05;
