@@ -436,7 +436,7 @@ html {
   font-family: "GothamPro-Bold", sans-serif;
 }
 
-.nta_not-found {
+.nta_double-wrap .nta_main-wrapper .nta_not-found {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -444,14 +444,14 @@ html {
   gap: 16px;
   margin-top: 117px;
 }
-.nta_not-found h1 {
+.nta_double-wrap .nta_main-wrapper .nta_not-found h1 {
   font-family: "GothamPro-Light", sans-serif;
   font-weight: 400;
   font-size: 128px;
   text-align: center;
   color: #555;
 }
-.nta_not-found p {
+.nta_double-wrap .nta_main-wrapper .nta_not-found p {
   font-family: "GothamPro", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -460,7 +460,7 @@ html {
   width: 100%;
   max-width: 428px;
 }
-.nta_not-found a {
+.nta_double-wrap .nta_main-wrapper .nta_not-found a {
   background: #eb492a;
   border-radius: 100px;
   width: 180px;
@@ -477,11 +477,14 @@ html {
   align-items: center;
   justify-content: center;
 }
-.nta_not-found a:hover {
+.nta_double-wrap .nta_main-wrapper .nta_not-found a:hover {
   background: #a21e05;
+  opacity: 1;
+  color: #fff;
   transition: all 0.3s ease;
 }
-.nta_not-found a:focus, .nta_not-found a:active {
+.nta_double-wrap .nta_main-wrapper .nta_not-found a:focus, .nta_double-wrap .nta_main-wrapper .nta_not-found a:active {
+  opacity: 1;
   background: #fff;
   color: #eb492a;
   border: 1px solid #eb492a;
