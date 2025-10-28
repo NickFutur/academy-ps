@@ -392,6 +392,7 @@ html {
   gap: 4px;
   width: 100%;
   max-width: 655px;
+  margin-bottom: 20px;
 }
 .nta_double-wrap .nta_main-wrapper figure figcaption {
   font-family: "GothamPro", sans-serif;
