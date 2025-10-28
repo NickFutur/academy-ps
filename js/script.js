@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const parentPodmenu = clickedLink.closest('.nta_active-podmenu');
             if (parentPodmenu) {
                 parentPodmenu.classList.add('active');
-                parentPodmenu.querySelector('>a').classList.add('active');
+                parentPodmenu.querySelector(':scope > a').classList.add('active');
             }
         } else {
             // Если это обычная ссылка в основном меню
