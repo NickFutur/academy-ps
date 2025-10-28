@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>личный кабинет</title>
+    <title>Личный кабинет</title>
     <link rel="stylesheet" href="scss/reset.css">
     <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <script src="js/swiper-bundle.min.js" defer></script>
@@ -92,17 +92,20 @@
                 </div>
             </div>
             <div class="nta_main-wrapper">
-                <div>
-                    <h2>Вход</h2>
-                    <div class="nta_email">
-                        <input name="email" id="email" type="email" autocomplete="off">
-                        <label for="email">Неправильный адрес электронной почты</label>
-                    </div>
-                    <div class="nta_password">
-                        <input name="password" id="password" type="password">
-                        <label for="password">Неправильный пароль</label>
-                    </div>
-                    <input type="submit" value="Вход" required>
+                <div class="nta_login-form-wrap">
+                    <form action="" method="post" class="nta_login-form">
+                        <h2>Вход</h2>
+                        <div class="nta_email">
+                            <input name="email" id="email" type="email" placeholder="E-mail" autocomplete="off"
+                                required>
+                            <label for="email">Неправильный адрес электронной почты</label>
+                        </div>
+                        <div class="nta_password">
+                            <input name="password" id="password" type="password" placeholder="Пароль" required>
+                            <label for="password">Неправильный пароль</label>
+                        </div>
+                        <input type="submit" value="Войти" class="nta_submit" required>
+                    </form>
                 </div>
             </div>
         </div>

@@ -407,28 +407,111 @@ html {
   transition: all 0.3s ease;
 }
 
-main .nta_main-wrapper div {
+.nta_login-form-wrap {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-main .nta_main-wrapper div .nta_email,
-main .nta_main-wrapper div .nta_password {
+.nta_login-form-wrap .nta_login-form {
+  width: 100%;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  margin-top: 104px;
 }
-main .nta_main-wrapper div .nta_email input,
-main .nta_main-wrapper div .nta_password input {
+.nta_login-form-wrap .nta_login-form h2 {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.nta_login-form-wrap .nta_login-form .nta_email,
+.nta_login-form-wrap .nta_login-form .nta_password {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.nta_login-form-wrap .nta_login-form .nta_email input,
+.nta_login-form-wrap .nta_login-form .nta_password input {
   border: 1px solid #e1e1e1;
   border-radius: 600px;
   padding: 20px;
-  width: 460px;
+  width: 100%;
   height: 64px;
+  background: #fff;
+  font-family: "GothamPro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: rgba(12.75, 17.85, 28.05, 0.4);
+  transition: border-color 0.3s ease;
 }
-main .nta_main-wrapper div .nta_email label,
-main .nta_main-wrapper div .nta_password label {
-  font-size: 12px;
-  color: red;
-  margin-top: 4px;
+.nta_login-form-wrap .nta_login-form .nta_email input::-webkit-input-placeholder,
+.nta_login-form-wrap .nta_login-form .nta_password input::-webkit-input-placeholder {
+  color: rgba(12.75, 17.85, 28.05, 0.4);
+}
+.nta_login-form-wrap .nta_login-form .nta_email input::-moz-placeholder,
+.nta_login-form-wrap .nta_login-form .nta_password input::-moz-placeholder {
+  color: rgba(12.75, 17.85, 28.05, 0.4);
+}
+.nta_login-form-wrap .nta_login-form .nta_email input:-ms-input-placeholder,
+.nta_login-form-wrap .nta_login-form .nta_password input:-ms-input-placeholder {
+  color: rgba(12.75, 17.85, 28.05, 0.4);
+}
+.nta_login-form-wrap .nta_login-form .nta_email input:-moz-placeholder,
+.nta_login-form-wrap .nta_login-form .nta_password input:-moz-placeholder {
+  color: rgba(12.75, 17.85, 28.05, 0.4);
+}
+.nta_login-form-wrap .nta_login-form .nta_email input.error,
+.nta_login-form-wrap .nta_login-form .nta_password input.error {
+  border-color: #eb492a;
+  color: #eb492a;
+}
+.nta_login-form-wrap .nta_login-form .nta_email input.error::-moz-placeholder, .nta_login-form-wrap .nta_login-form .nta_password input.error::-moz-placeholder {
+  color: #eb492a;
+}
+.nta_login-form-wrap .nta_login-form .nta_email input.error::placeholder,
+.nta_login-form-wrap .nta_login-form .nta_password input.error::placeholder {
+  color: #eb492a;
+}
+.nta_login-form-wrap .nta_login-form .nta_email label,
+.nta_login-form-wrap .nta_login-form .nta_password label {
+  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #eb492a;
+  font-family: "GothamPro", sans-serif;
+}
+.nta_login-form-wrap .nta_login-form .nta_email label.show,
+.nta_login-form-wrap .nta_login-form .nta_password label.show {
+  display: block;
+}
+.nta_login-form-wrap .nta_login-form .nta_submit {
+  border-radius: 100px;
+  width: 100%;
+  height: 46px;
+  background: #eb492a;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "GothamPro", sans-serif;
+  font-size: 16px;
+}
+.nta_login-form-wrap .nta_login-form .nta_submit:hover {
+  background: #a21e05;
+  border: none;
+  outline: none;
+}
+.nta_login-form-wrap .nta_login-form .nta_submit:active, .nta_login-form-wrap .nta_login-form .nta_submit:focus {
+  background: #fff;
+  border: 1px solid #eb492a;
+  color: #eb492a;
 }
 
 body {
