@@ -6,8 +6,14 @@ const swiper = new Swiper('.nta_main-slider__swiper', {
     // Autoplay
     autoplay: {
         delay: 4000, // 4 секунды
-        disableOnInteraction: false, // продолжать автоплей после взаимодействия пользователя
+        disableOnInteraction: false,
     },
+    speed: 1000,
+    followFinger: true,
+    resistanceRatio: 0.7,
+    touchRatio: 1,
+    touchAngle: 45,
+    grabCursor: true,
 });
 
 const swiper_dop = new Swiper('.nta_dop-wrapper__slider', {
@@ -18,8 +24,9 @@ const swiper_dop = new Swiper('.nta_dop-wrapper__slider', {
     // Autoplay
     autoplay: {
         delay: 4000, // 4 секунды
-        disableOnInteraction: false, // продолжать автоплей после взаимодействия пользователя
+        disableOnInteraction: false,
     },
+    speed: 600,
 });
 
 
