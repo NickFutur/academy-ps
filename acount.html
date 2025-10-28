@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>личный кабинет</title>
+    <link rel="stylesheet" href="scss/reset.css">
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="scss/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="nta_header">
+        <div class="nta_header-block">
+            <div class="nta_logo">
+                <img src="img/logo.svg" alt="logo academy-ps">
+            </div>
+            <div class="nta_login">
+                <p>Личный кабинет:</p>
+                <a href="">Войти</a>
+            </div>
+        </div>
+        <nav class="nta_menu">
+            <ul class="nta_main-menu">
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">Рабочие программы</a>
+                </li>
+                <li class="nta_active-podmenu"><a href="#">Предложения</a>
+                    <ul class="nta_podmenu">
+                        <li class="nta_active"><a href="#">Предложения</a></li>
+                        <li><a href="#">Рабочие программы</a></li>
+                        <li><a href="#">Слушителям</a></li>
+                        <li><a href="#">Наши ценности</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Слушателям</a></li>
+                <li class="nta_active-podmenu"><a href="#">Наши ценности</a>
+                    <ul class="nta_podmenu">
+                        <li><a href="#">Наши партнеры</a></li>
+                        <li><a href="#">Наши преподаватели</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="nta_double-wrap">
+            <div class="nta_dop-wrapper">
+                <div class="swiper nta_dop-wrapper__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/Female2.png" alt="фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/Female3.png" alt="фото">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/Female4.png" alt="фото">
+                        </div>
+                    </div>
+                </div>
+                <div class="nta_left-menu">
+                    <ul>
+                        <li><a href="#">Сведения
+                                об образовательной организации</a></li>
+                        <li><a href="#">Основные сведения</a></li>
+                        <li><a href="#">Структура и органы управления
+                                образовательной организацией</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Образование</a></li>
+                        <li><a href="#">Образовательные стандарты</a></li>
+                        <li><a href="#">Руководство.
+                                Педагогический
+                                (научно-педагогический) состав</a></li>
+                        <li><a href="#">Материально-техническое
+                                обеспечение и оснащенность
+                                образовательного процесса</a></li>
+                        <li><a href="#">Стипендия и иные виды
+                                материальной поддержки</a></li>
+                        <li><a href="#">Платные образовательные услуги
+                            </a></li>
+                        <li><a href="#">Финансово-хозяйственная
+                                деятельность</a></li>
+                        <li><a href="#">Вакантные места для приема (перевода)</a></li>
+                        <li><a href="#">Библиотека</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nta_main-wrapper">
+                <div>
+                    <h2>Вход</h2>
+                    <div class="nta_email">
+                        <input name="email" id="email" type="email" autocomplete="off">
+                        <label for="email">Неправильный адрес электронной почты</label>
+                    </div>
+                    <div class="nta_password">
+                        <input name="password" id="password" type="password">
+                        <label for="password">Неправильный пароль</label>
+                    </div>
+                    <input type="submit" value="Вход" required>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

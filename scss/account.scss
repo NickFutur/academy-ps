@@ -1,0 +1,30 @@
+@forward "_404.scss";
+
+main {
+    .nta_main-wrapper {
+        div {
+            display: flex;
+            flex-direction: column;
+
+            .nta_email,
+            .nta_password {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    border: 1px solid #e1e1e1;
+                    border-radius: 600px;
+                    padding: 20px;
+                    width: 460px;
+                    height: 64px;
+                }
+
+                label {
+                    font-size: 12px;
+                    color: red;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}

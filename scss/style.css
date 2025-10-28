@@ -407,6 +407,30 @@ html {
   transition: all 0.3s ease;
 }
 
+main .nta_main-wrapper div {
+  display: flex;
+  flex-direction: column;
+}
+main .nta_main-wrapper div .nta_email,
+main .nta_main-wrapper div .nta_password {
+  display: flex;
+  flex-direction: column;
+}
+main .nta_main-wrapper div .nta_email input,
+main .nta_main-wrapper div .nta_password input {
+  border: 1px solid #e1e1e1;
+  border-radius: 600px;
+  padding: 20px;
+  width: 460px;
+  height: 64px;
+}
+main .nta_main-wrapper div .nta_email label,
+main .nta_main-wrapper div .nta_password label {
+  font-size: 12px;
+  color: red;
+  margin-top: 4px;
+}
+
 body {
   font-family: "GothamPro", sans-serif;
   font-weight: 400;
