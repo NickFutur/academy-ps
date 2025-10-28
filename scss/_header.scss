@@ -9,7 +9,6 @@ html {
     box-sizing: border-box;
 }
 
-
 .nta_header {
     display: flex;
     flex-direction: column;
@@ -70,7 +69,6 @@ html {
                 justify-content: center;
                 text-decoration: none;
 
-
                 &:hover,
                 &:focus {
                     background: #a21e05;
@@ -90,12 +88,10 @@ html {
     .nta_main-slider {
         margin-bottom: 27px;
         position: relative;
-
         width: 100%;
         max-width: 1100px;
         padding: 0px 10px;
         height: 420px;
-
 
         .nta_main-slider__swiper {
             width: 100%;
@@ -137,6 +133,7 @@ html {
                 list-style: none;
                 position: relative;
 
+                // Стили для активного обычного пункта меню
                 &.active {
                     a {
                         background: #555;
@@ -145,21 +142,6 @@ html {
 
                         &::after {
                             background-image: url("../img/icon-white.svg");
-                        }
-                    }
-                }
-
-                &.nta_active-podmenu {
-                    >a {
-                        &::after {
-                            background-image: url("../img/icon-gray.svg");
-                        }
-
-                        &.active,
-                        &:focus {
-                            &::after {
-                                background-image: url("../img/icon-white.svg");
-                            }
                         }
                     }
                 }
@@ -188,13 +170,12 @@ html {
                         background: #fff2b0;
                         transition: $transition-def;
 
-                        // Для элементов с подменю при наведении
                         &::after {
                             background-image: url("../img/icon-gray.svg");
                         }
                     }
 
-                    // Убираем стандартные состояния, заменяем на классы
+                    // Активное состояние для любой ссылки
                     &.active {
                         background: #555;
                         color: #fff;
@@ -204,6 +185,7 @@ html {
                             background-image: url("../img/icon-white.svg");
                         }
 
+                        // При наведении на активную ссылку сохраняем активные стили
                         &:hover {
                             background: #555;
                             color: #fff;
@@ -216,6 +198,7 @@ html {
                 }
             }
 
+            // Стили для пунктов с подменю
             .nta_active-podmenu {
                 position: relative;
 
@@ -232,7 +215,7 @@ html {
                         transition: all $transition-def;
                     }
 
-                    // Активное состояние для ссылки с подменю
+                    // Активное состояние для ссылки с подменю (после клика)
                     &.active {
                         background: #555;
                         color: #fff;
@@ -241,6 +224,7 @@ html {
                             background-image: url("../img/icon-white.svg");
                         }
 
+                        // При наведении на активную ссылку с подменю
                         &:hover {
                             background: #555;
                             color: #fff;
@@ -252,14 +236,24 @@ html {
                     }
                 }
 
+                // При наведении на пункт с подменю
                 &:hover {
                     >a {
                         background: #fff2b0;
                         color: $gray;
 
-                        // Если элемент активен, при наведении сохраняем активную иконку
-                        &:not(.active)::after {
+                        &::after {
                             background-image: url("../img/icon-gray.svg");
+                        }
+
+                        // Если ссылка активна, при наведении на подменю оставляем активные стили
+                        &.active {
+                            background: #555;
+                            color: #fff;
+
+                            &::after {
+                                background-image: url("../img/icon-white.svg");
+                            }
                         }
                     }
 
@@ -335,4 +329,4 @@ html {
             }
         }
     }
-}
+} 

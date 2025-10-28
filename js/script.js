@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const parentPodmenu = clickedLink.closest('.nta_active-podmenu');
             if (parentPodmenu) {
                 parentPodmenu.classList.add('active');
-                parentPodmenu.querySelector('> a').classList.add('active');
+                parentPodmenu.querySelector('>a').classList.add('active');
             }
         } else {
             // Если это обычная ссылка в основном меню
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Дополнительно: обработка ховера для подменю (если нужно сохранить ховер-эффекты)
     document.querySelectorAll('.nta_active-podmenu').forEach(podmenuItem => {
-        const link = podmenuItem.querySelector('> a');
+        const link = podmenuItem.querySelector(':scope > a');
         const podmenu = podmenuItem.querySelector('.nta_podmenu');
 
         podmenuItem.addEventListener('mouseenter', function () {
