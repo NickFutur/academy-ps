@@ -287,8 +287,8 @@ html {
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:hover {
   background: none;
-  color: #fff2b0;
-  opacity: 1;
+  color: #555;
+  opacity: 0.4;
   transition: all 0.3s ease;
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:focus, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:active {
@@ -551,7 +551,7 @@ html {
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
-  color: rgba(12.75, 17.85, 28.05, 0.4);
+  color: rgb(12.75, 17.85, 28.05);
   transition: border-color 0.3s ease;
 }
 .nta_login-form-wrap .nta_login-form .nta_email input::-webkit-input-placeholder,

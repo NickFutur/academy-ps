@@ -42,7 +42,7 @@
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 120%;
-                color: rgb(5%, 7%, 11%, 0.4);
+                color: rgb(5%, 7%, 11%, 1);
                 transition: border-color 0.3s ease;
 
                 &::-webkit-input-placeholder {
@@ -135,32 +135,3 @@
         }
     }
 }
-
-// main {
-//     .nta_main-wrapper {
-//         div {
-//             display: flex;
-//             flex-direction: column;
-
-//             .nta_email,
-//             .nta_password {
-//                 display: flex;
-//                 flex-direction: column;
-
-//                 input {
-//                     border: 1px solid #e1e1e1;
-//                     border-radius: 600px;
-//                     padding: 20px;
-//                     width: 460px;
-//                     height: 64px;
-//                 }
-
-//                 label {
-//                     font-size: 12px;
-//                     color: red;
-//                     margin-top: 4px;
-//                 }
-//             }
-//         }
-//     }
-// }
