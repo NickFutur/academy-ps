@@ -283,6 +283,16 @@ html {
                     transform: translateY(-10px);
                     transition: all $transition-def;
 
+                    &:before {
+                        content: '';
+                        background: none;
+                        height: 30px;
+                        width: 100%;
+                        position: absolute;
+                        top: -8px;
+                        left: 0;
+                    }
+
                     li {
                         &.nta_active {
                             a {
@@ -329,4 +339,4 @@ html {
             }
         }
     }
-} 
+}

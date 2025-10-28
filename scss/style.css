@@ -1,13 +1,13 @@
 @font-face {
   font-family: "GothamPro";
-  src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
+  src: url("../fonts/GothamPro.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "GothamPro-Bold";
-  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  src: url("../fonts/GothamPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -254,6 +254,15 @@ html {
   transform: translateY(-10px);
   transition: all all 0.3s ease;
 }
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu:before {
+  content: "";
+  background: none;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  top: -8px;
+  left: 0;
+}
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li.nta_active a {
   color: #555;
   opacity: 0.4;
@@ -355,6 +364,9 @@ html {
 }
 .nta_double-wrap .nta_dop-wrapper .nta_dop-wrapper__slider img {
   border-radius: 0px;
+}
+.nta_double-wrap .nta_dop-wrapper .nta_left-menu {
+  margin-top: 25px;
 }
 .nta_double-wrap .nta_dop-wrapper .nta_left-menu ul {
   padding: 0;
@@ -582,6 +594,29 @@ html {
 .nta_login-form-wrap .nta_login-form .nta_email label.show,
 .nta_login-form-wrap .nta_login-form .nta_password label.show {
   display: block;
+}
+.nta_login-form-wrap .nta_login-form .nta_email .nta_password-eye,
+.nta_login-form-wrap .nta_login-form .nta_password .nta_password-eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  background-image: url("../img/eye-close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+.nta_login-form-wrap .nta_login-form .nta_email .nta_password-eye.active,
+.nta_login-form-wrap .nta_login-form .nta_password .nta_password-eye.active {
+  background-image: url("../img/eye.svg");
 }
 .nta_login-form-wrap .nta_login-form .nta_submit {
   border-radius: 100px;

@@ -83,6 +83,29 @@
                     display: block;
                 }
             }
+
+            .nta_password-eye {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: none;
+                background-image: url("../img/eye-close.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                border: none;
+                outline: none;
+                background-color: transparent; // исправлено с none на transparent
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                transition: background-image 0.3s ease; // добавьте плавный переход
+
+                &.active {
+                    background-image: url("../img/eye.svg");
+                }
+            }
         }
 
         .nta_submit {
