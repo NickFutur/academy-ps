@@ -1,0 +1,32 @@
+@use "fonts";
+@use "variables" as *;
+
+@media (max-width: 1080px) {
+  .nta_header {
+    .nta_header-block {
+      .nta_login {
+        flex-direction: row;
+        a {
+          background-color: $white;
+          background-image: url("../img/icon-login-mobile.svg");
+
+          &:hover {
+            background-color: $white;
+          }
+        }
+        .nta_menu-burger-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          svg {
+            width: 32px;
+            height: 21px;
+          }
+        }
+      }
+    }
+    .nta_menu {
+      display: none;
+    }
+  }
+}

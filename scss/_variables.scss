@@ -1,9 +1,8 @@
-$font-primary: 'GothamPro',
-sans-serif;
-$font-secondary: 'GothamPro-Bold',
-sans-serif;
-$font-light: 'GothamPro-Light',
-sans-serif;
+$font-primary: "GothamPro", sans-serif;
+$font-secondary: "GothamPro-Bold", sans-serif;
+$font-light: "GothamPro-Light", sans-serif;
+$montserrat-medium: "Montserrat-Medium", sans-serif;
+$montserrat-bold: "Montserrat-Bold", sans-serif;
 
 $fw-regular: 400;
 $fw-bold: 700;
@@ -14,4 +13,10 @@ $fs-xl: 32px;
 $fs-xxl: 40px;
 
 $gray: #555;
+$white: #fff;
+$yellow: #ffd503;
+$link-red: #c44d4d;
+$text-red: #ca305f;
+$black: #222;
+$light-blue: #f8fbfb;
 $transition-def: all 0.3s ease;

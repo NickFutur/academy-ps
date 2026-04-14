@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "GothamPro";
   src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
@@ -27,11 +28,16 @@ html {
   box-sizing: border-box;
 }
 
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a::after, .nta_header .nta_menu .nta_main-menu li a, .nta_header .nta_header-block .nta_login a {
+  transition: all 0.3s ease;
+}
+
 .nta_header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0px 38px 0px;
+  margin: 20px 0 24px;
+  padding: 0px 10px;
 }
 .nta_header .nta_header-block {
   display: flex;
@@ -39,13 +45,13 @@ html {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1100px;
-  padding: 0px 10px;
-  margin-bottom: 38px;
+  max-width: 1080px;
+  padding: 0 10px;
+  margin-bottom: 24px;
 }
 .nta_header .nta_header-block .nta_logo {
-  max-width: 363px;
-  max-height: 94px;
+  max-width: 250px;
+  max-height: 67px;
   width: 100%;
   height: 100%;
 }
@@ -70,37 +76,34 @@ html {
   margin: 0;
 }
 .nta_header .nta_header-block .nta_login a {
-  border-radius: 100px;
-  width: 180px;
-  height: 46px;
-  background: #eb492a;
-  font-family: "GothamPro", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  text-align: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #ca305f;
   color: #fff;
-  transition: all 0.3s ease;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  background-image: url("../img/icon-login-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .nta_header .nta_header-block .nta_login a:hover, .nta_header .nta_header-block .nta_login a:focus {
-  background: #a21e05;
-  transition: all 0.3s ease;
+  background-color: #b03057;
 }
 .nta_header .nta_header-block .nta_login a:active {
-  background: #fff;
-  border: 1px solid #eb492a;
-  color: #eb492a;
-  transition: all 0.3s ease;
+  background-color: #fff;
+  border: 1px solid #b03057;
+  color: #b03057;
 }
 .nta_header .nta_main-slider {
   margin-bottom: 27px;
   position: relative;
   width: 100%;
   max-width: 1100px;
-  padding: 0px 10px;
+  padding: 0 10px;
   height: 420px;
 }
 .nta_header .nta_main-slider .nta_main-slider__swiper {
@@ -120,72 +123,134 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.nta_header .nta_main-image {
+  width: 100%;
+  max-width: 1080px;
+  height: 410px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.nta_header .nta_main-image__wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.nta_header .nta_main-image__wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.nta_header .nta_main-image__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.nta_header .nta_main-image__content-block:nth-child(1) {
+  position: absolute;
+  top: 301px;
+  left: 124px;
+}
+.nta_header .nta_main-image__content-block:nth-child(2) {
+  position: absolute;
+  top: 41px;
+  left: 329px;
+}
+.nta_header .nta_main-image__content-block:nth-child(3) {
+  position: absolute;
+  top: 143px;
+  right: 43px;
+}
+.nta_header .nta_main-image__content-block {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #fff;
+  border-radius: 40px;
+  padding: 12px 16px;
+  width: auto;
+  max-width: 225px;
+  height: 54px;
+}
+.nta_header .nta_main-image__content-block img {
+  width: 38px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.nta_header .nta_main-image__content-block p {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  color: #000;
+}
 .nta_header .nta_menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1080px;
 }
 .nta_header .nta_menu .nta_main-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 17px;
+  width: 100%;
   padding: 0;
+  background: #222;
+  border-radius: 20px;
 }
 .nta_header .nta_menu .nta_main-menu li {
   list-style: none;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+.nta_header .nta_menu .nta_main-menu li::after {
+  content: "";
+  background-color: #ca305f;
+  width: 1px;
+  height: 31px;
+}
+.nta_header .nta_menu .nta_main-menu li:last-child::after {
+  display: none;
 }
 .nta_header .nta_menu .nta_main-menu li.active a {
-  background: #555;
   color: #fff;
-  transition: all 0.3s ease;
-}
-.nta_header .nta_menu .nta_main-menu li.active a::after {
-  background-image: url("../img/icon-white.svg");
 }
 .nta_header .nta_menu .nta_main-menu li a {
-  border: 0px solid #000;
-  border-radius: 100px;
-  padding: 16px 31px;
   width: 100%;
-  background: #d5e2e9;
-  height: 46px;
+  height: 66px;
+  padding: 16px 31px;
+  border-radius: 100px;
+  border: 0;
   text-decoration: none;
-  font-family: "GothamPro", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  text-align: center;
-  color: #555;
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  font-family: "GothamPro", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
 }
 .nta_header .nta_menu .nta_main-menu li a:hover {
-  color: #555;
-  background: #fff2b0;
-  transition: all 0.3s ease;
-}
-.nta_header .nta_menu .nta_main-menu li a:hover::after {
-  background-image: url("../img/icon-gray.svg");
+  color: #ffd503;
 }
 .nta_header .nta_menu .nta_main-menu li a.active {
-  background: #555;
-  color: #fff;
-  transition: all 0.3s ease;
+  color: #ffd503;
 }
-.nta_header .nta_menu .nta_main-menu li a.active::after {
-  background-image: url("../img/icon-white.svg");
-}
-.nta_header .nta_menu .nta_main-menu li a.active:hover {
-  background: #555;
-  color: #fff;
-}
-.nta_header .nta_menu .nta_main-menu li a.active:hover::after {
+.nta_header .nta_menu .nta_main-menu li a:hover::after, .nta_header .nta_menu .nta_main-menu li a.active::after {
   background-image: url("../img/icon-white.svg");
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu {
@@ -193,99 +258,69 @@ html {
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a::after {
   content: "";
-  margin-left: 2px;
   position: relative;
+  margin-left: 2px;
   width: 16px;
   height: 16px;
-  background-image: url("../img/icon-gray.svg");
+  background-image: url("../img/icon-white.svg");
   background-repeat: no-repeat;
   background-position: center;
-  transition: all all 0.3s ease;
 }
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a.active {
-  background: #555;
-  color: #fff;
-}
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a.active::after {
-  background-image: url("../img/icon-white.svg");
-}
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a.active:hover {
-  background: #555;
-  color: #fff;
-}
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a.active:hover::after {
-  background-image: url("../img/icon-white.svg");
-}
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover > a {
-  background: #fff2b0;
-  color: #555;
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a.active, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu > a:hover {
+  color: #ffd503;
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover > a::after {
   background-image: url("../img/icon-gray.svg");
 }
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover > a.active {
-  background: #555;
-  color: #fff;
-}
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover > a.active::after {
   background-image: url("../img/icon-white.svg");
-}
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover .nta_podmenu {
-  display: flex;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(8px);
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu {
   display: flex;
   position: absolute;
   flex-direction: column;
-  border: 0px solid #000;
-  border-radius: 30px;
+  gap: 10px;
+  width: 100%;
   padding: 16px 31px;
-  width: 219px;
-  height: auto;
-  background: #d5e2e9;
   left: 0;
-  gap: 8px;
+  background: #222;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px);
+  top: 66px;
   transition: all all 0.3s ease;
 }
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li::after {
+  display: none;
+}
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li.nta_active a {
-  color: #555;
-  opacity: 0.4;
+  color: #ffd503;
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a {
   font-family: "GothamPro", sans-serif;
   font-weight: 400;
   font-size: 15px;
+  color: #fff;
   text-align: left;
-  color: #555;
   text-decoration: none;
+  background: none;
   border: none;
   border-radius: 0;
-  background: none;
-  padding: 0px;
+  padding: 0;
   width: auto;
   height: auto;
   justify-content: flex-start;
+  display: flex;
 }
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a::after {
-  display: none;
-}
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:hover {
-  background: none;
-  color: #fff2b0;
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:hover, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:focus, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:active {
+  color: #ffd503;
   opacity: 1;
-  transition: all 0.3s ease;
 }
-.nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:focus, .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu li a:active {
-  background: none;
-  opacity: 0.4;
-  transition: all 0.3s ease;
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover .nta_podmenu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .nta_footer-menu {
@@ -333,19 +368,39 @@ html {
   transition: all 0.3s ease;
 }
 
+.footer-block .footer-block__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 154px;
+  width: 100%;
+}
+.footer-block .footer-block__copyright p {
+  font-family: "GothamPro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #000;
+}
+
 .nta_double-wrap {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap-reverse;
   width: 100%;
   justify-content: center;
   max-width: 1080px;
-  gap: 40px;
+  gap: 20px;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .nta_double-wrap {
+    flex-direction: column-reverse;
+  }
 }
 .nta_double-wrap .nta_dop-wrapper {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 254px;
   overflow: hidden;
 }
 .nta_double-wrap .nta_dop-wrapper .nta_dop-wrapper__slider {
@@ -360,7 +415,7 @@ html {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 24px;
 }
 .nta_double-wrap .nta_dop-wrapper .nta_left-menu ul li {
   list-style: none;
@@ -369,21 +424,21 @@ html {
 .nta_double-wrap .nta_dop-wrapper .nta_left-menu ul li a {
   font-family: "GothamPro", sans-serif;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 120%;
-  text-decoration: underline;
+  font-size: 15px;
+  line-height: 140%;
+  text-decoration: none;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
-  color: #555;
+  color: #000;
   transition: all 0.3s ease;
 }
 .nta_double-wrap .nta_dop-wrapper .nta_left-menu ul li a:hover, .nta_double-wrap .nta_dop-wrapper .nta_left-menu ul li a:focus, .nta_double-wrap .nta_dop-wrapper .nta_left-menu ul li a:active {
-  opacity: 0.4;
+  color: #c44d4d;
   transition: all 0.3s ease;
 }
 .nta_double-wrap .nta_main-wrapper {
   flex: 1;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -437,6 +492,84 @@ html {
 }
 .nta_double-wrap .nta_main-wrapper b {
   font-family: "GothamPro-Bold", sans-serif;
+}
+
+.nta_main-wrapper .nta_content-info {
+  background: #f8fbfb;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 20px 40px 24px 40px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+.nta_main-wrapper .nta_content-info h2 {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 117%;
+  color: #000;
+  margin-bottom: 16px;
+}
+.nta_main-wrapper .nta_content-info h2 span {
+  color: #ca305f;
+}
+.nta_main-wrapper .nta_content-info div {
+  width: 100%;
+  max-width: 660px;
+}
+.nta_main-wrapper .nta_content-info div p {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #222;
+  margin-bottom: 16px;
+}
+.nta_main-wrapper .nta_content-info div p:last-child {
+  margin-bottom: 0;
+}
+.nta_main-wrapper .nta_content-info div p span {
+  font-weight: 700;
+}
+.nta_main-wrapper .nta_content-info div ul li {
+  list-style: disc;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 12px;
+}
+.nta_main-wrapper .nta_content-info div ul li:last-child {
+  margin-bottom: 0;
+}
+.nta_main-wrapper .nta_content-info div ul li span {
+  font-weight: 700;
+}
+.nta_main-wrapper .nta_content-info div ol li {
+  list-style: decimal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 12px;
+}
+.nta_main-wrapper .nta_content-info--black {
+  background: #000;
+  border: 1px solid #222;
+  color: #fff;
+}
+.nta_main-wrapper .nta_content-info--black h2 {
+  color: #fff;
+}
+.nta_main-wrapper .nta_content-info--black p {
+  color: #fff;
+  margin-bottom: 0;
+}
+.nta_main-wrapper .nta_content-info--black img {
+  width: 113px;
+  height: 100px;
+  margin-bottom: 16px;
 }
 
 .nta_double-wrap .nta_main-wrapper .nta_not-found {
@@ -672,7 +805,8 @@ body {
 }
 body main {
   margin: 0% auto;
-  width: 1100px;
+  width: 100%;
+  max-width: 1080px;
   padding: 0px 10px;
 }
 body main .nta_main-wrap .nta_education-service {

@@ -1,209 +1,210 @@
-@use 'fonts';
-@use 'variables'as *;
+@use "fonts";
+@use "variables" as *;
 @forward "../scss/header";
 @forward "../scss/footer";
 @forward "../scss/maket";
 @forward "../scss/404";
 @forward "../scss/account";
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 h1,
 h2 {
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-size: $fs-xl;
-    color: $gray;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: $fs-xl;
+  color: $gray;
 }
 
 h3 {
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-size: 28px;
-    color: $gray;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 28px;
+  color: $gray;
 }
 
 h4 {
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-size: 24px;
-    color: $gray;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 24px;
+  color: $gray;
 }
 
 h5 {
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-size: 20px;
-    color: $gray;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 20px;
+  color: $gray;
 }
 
 h6 {
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-size: 16px;
-    color: $gray;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 16px;
+  color: $gray;
 }
 
 p {
-    font-family: $font-primary;
-    font-weight: 400;
-    font-size: $fs-md;
-    color: $gray;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: $fs-md;
+  color: $gray;
 }
 
 a {
-    font-family: $font-primary;
-    font-weight: 400;
-    font-size: $fs-md;
-    color: $gray;
-    transition: $transition-def;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: $fs-md;
+  color: $gray;
+  transition: $transition-def;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 30px;
 }
 
-
 body {
-    font-family: $font-primary;
-    font-weight: $fw-regular;
-    font-size: $fs-md;
+  font-family: $font-primary;
+  font-weight: $fw-regular;
+  font-size: $fs-md;
 
-    main {
-        margin: 0% auto;
-        width: 1100px;
-        padding: 0px 10px;
+  main {
+    margin: 0% auto;
+    width: 100%;
+    max-width: 1080px;
+    padding: 0px 10px;
 
-        .nta_main-wrap {
-            .nta_education-service {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 61px;
+    .nta_main-wrap {
+      .nta_education-service {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 61px;
 
-                h2 {
-                    font-family: $font-secondary;
-                    font-weight: $fw-bold;
-                    font-size: $fs-xl;
-                    color: $gray;
-                    text-align: center;
-                    margin-bottom: 48px;
-                }
-
-                .education-service__wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 30px;
-
-                    .education-service__wrapper-up {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 30px;
-
-                        .education-service__card {
-                            border: 0px solid #000;
-                            border-radius: 20px;
-                            width: 246px;
-                            height: 246px;
-                            background: #fae4da;
-                            padding-left: 21px;
-
-                            img {
-                                margin-top: 20px;
-                                width: 38px;
-                                height: 38px;
-                            }
-
-                            p {
-                                font-family: $font-primary;
-                                font-size: $fs-md;
-                                font-weight: $fw-regular;
-                                color: $gray;
-                                margin-top: 13px;
-                                width: 193px;
-                            }
-                        }
-                    }
-
-                    .education-service__wrapper-under {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 30px;
-
-                        .education-service__card {
-                            border: 0px solid #000;
-                            border-radius: 20px;
-                            width: 246px;
-                            height: 246px;
-                            background: #d8e2d9;
-                            padding-left: 21px;
-
-                            img {
-                                margin-top: 20px;
-                                width: 38px;
-                                height: 38px;
-                            }
-
-                            p {
-                                font-family: $font-primary;
-                                font-size: $fs-md;
-                                font-weight: $fw-regular;
-                                color: $gray;
-                                margin-top: 13px;
-                                width: 210px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .nta_info-block {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .nta_info-wrap {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    margin-bottom: 56px;
-
-                    h2 {
-                        font-family: $font-secondary;
-                        font-weight: $fw-bold;
-                        font-size: $fs-xl;
-                        color: $gray;
-                        margin-bottom: 21px;
-                    }
-
-                    p {
-                        font-family: $font-primary;
-                        font-size: $fs-md;
-                        font-weight: $fw-regular;
-                        color: $gray;
-                        text-align: center;
-                        width: 683px;
-                    }
-                }
-            }
-
-            .nta_info-line {
-                border: 1px solid #555;
-                width: 558px;
-                height: 0px;
-                color: $gray;
-            }
-
-            h2 {
-                font-family: $font-secondary;
-                font-weight: $fw-bold;
-                font-size: $fs-xxl;
-            }
+        h2 {
+          font-family: $font-secondary;
+          font-weight: $fw-bold;
+          font-size: $fs-xl;
+          color: $gray;
+          text-align: center;
+          margin-bottom: 48px;
         }
+
+        .education-service__wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+
+          .education-service__wrapper-up {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            .education-service__card {
+              border: 0px solid #000;
+              border-radius: 20px;
+              width: 246px;
+              height: 246px;
+              background: #fae4da;
+              padding-left: 21px;
+
+              img {
+                margin-top: 20px;
+                width: 38px;
+                height: 38px;
+              }
+
+              p {
+                font-family: $font-primary;
+                font-size: $fs-md;
+                font-weight: $fw-regular;
+                color: $gray;
+                margin-top: 13px;
+                width: 193px;
+              }
+            }
+          }
+
+          .education-service__wrapper-under {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            .education-service__card {
+              border: 0px solid #000;
+              border-radius: 20px;
+              width: 246px;
+              height: 246px;
+              background: #d8e2d9;
+              padding-left: 21px;
+
+              img {
+                margin-top: 20px;
+                width: 38px;
+                height: 38px;
+              }
+
+              p {
+                font-family: $font-primary;
+                font-size: $fs-md;
+                font-weight: $fw-regular;
+                color: $gray;
+                margin-top: 13px;
+                width: 210px;
+              }
+            }
+          }
+        }
+      }
+
+      .nta_info-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nta_info-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 56px;
+
+          h2 {
+            font-family: $font-secondary;
+            font-weight: $fw-bold;
+            font-size: $fs-xl;
+            color: $gray;
+            margin-bottom: 21px;
+          }
+
+          p {
+            font-family: $font-primary;
+            font-size: $fs-md;
+            font-weight: $fw-regular;
+            color: $gray;
+            text-align: center;
+            width: 683px;
+          }
+        }
+      }
+
+      .nta_info-line {
+        border: 1px solid #555;
+        width: 558px;
+        height: 0px;
+        color: $gray;
+      }
+
+      h2 {
+        font-family: $font-secondary;
+        font-weight: $fw-bold;
+        font-size: $fs-xxl;
+      }
     }
+  }
 }
 
 footer {
-    min-height: 40px;
+  min-height: 40px;
 }

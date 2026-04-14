@@ -1,56 +1,72 @@
-@use 'fonts';
-@use 'variables'as *;
+@use "fonts";
+@use "variables" as *;
 
 .nta_footer-menu {
-    display: flex;
-    justify-content: center;
-    margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  width: 100%;
+  margin-bottom: 65px;
+
+  .nta_footer-menu__left-list {
     width: 100%;
-    margin-bottom: 65px;
+    max-width: 731px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
 
-    .nta_footer-menu__left-list {
-        width: 100%;
-        max-width: 731px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        list-style: none;
-        padding: 0;
+    li {
+      width: 50%;
+      max-width: 337px;
+      min-width: 150px;
+      box-sizing: border-box;
 
-        li {
-            width: 50%;
-            max-width: 337px;
-            min-width: 150px;
-            box-sizing: border-box;
+      &:nth-child(odd) {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-bottom: 30px;
+      }
 
+      &:nth-child(even) {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-bottom: 33px;
+      }
 
-            &:nth-child(odd) {
-                padding-right: 10px;
-                padding-left: 10px;
-                margin-bottom: 30px;
-            }
+      a {
+        text-decoration: underline;
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: $fs-md;
+        color: $gray;
+        transition: $transition-def;
 
-            &:nth-child(even) {
-                padding-right: 10px;
-                padding-left: 10px;
-                margin-bottom: 33px;
-            }
-
-            a {
-                text-decoration: underline;
-                font-family: $font-primary;
-                font-weight: 400;
-                font-size: $fs-md;
-                color: $gray;
-                transition: $transition-def;
-
-                &:hover,
-                &:focus,
-                &:active {
-                    opacity: 0.4;
-                    transition: $transition-def;
-                }
-            }
+        &:hover,
+        &:focus,
+        &:active {
+          opacity: 0.4;
+          transition: $transition-def;
         }
+      }
     }
+  }
+}
+
+.footer-block {
+  .footer-block__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 154px;
+    width: 100%;
+    p {
+      font-family: $font-primary;
+      font-weight: $fw-regular;
+      font-size: 14px;
+      line-height: 143%;
+      color: #000;
+    }
+  }
 }

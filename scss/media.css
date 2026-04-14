@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothamPro-Bold";
+  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothamPro-Light";
+  src: url("../fonts/GothamPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@media (max-width: 1080px) {
+  .nta_header .nta_header-block .nta_login {
+    flex-direction: row;
+  }
+  .nta_header .nta_header-block .nta_login a {
+    background-color: #fff;
+    background-image: url("../img/icon-login-mobile.svg");
+  }
+  .nta_header .nta_header-block .nta_login a:hover {
+    background-color: #fff;
+  }
+  .nta_header .nta_header-block .nta_login .nta_menu-burger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nta_header .nta_header-block .nta_login .nta_menu-burger-btn svg {
+    width: 32px;
+    height: 21px;
+  }
+  .nta_header .nta_menu {
+    display: none;
+  }
+}/*# sourceMappingURL=media.css.map */

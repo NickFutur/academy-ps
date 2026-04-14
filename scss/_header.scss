@@ -1,332 +1,358 @@
-@use 'fonts';
-@use 'variables'as *;
+@use "fonts";
+@use "variables" as *;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+%transition-base {
+  transition: $transition-def;
 }
 
 .nta_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 24px;
+  padding: 0px 10px;
+
+  .nta_header-block {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0px 38px 0px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1080px;
+    padding: 0 10px;
+    margin-bottom: 24px;
 
-    .nta_header-block {
-        display: flex;
+    .nta_logo {
+      max-width: 250px;
+      max-height: 67px;
+      width: 100%;
+      height: 100%;
+
+      img {
         width: 100%;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 20px;
-        max-width: 1100px;
-        padding: 0px 10px;
-        margin-bottom: 38px;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
 
-        .nta_logo {
-            max-width: 363px;
-            max-height: 94px;
-            width: 100%;
-            height: 100%;
+    .nta_login {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
+      p {
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: $fs-md;
+        color: #555;
+        margin: 0;
+      }
+
+      a {
+        @extend %transition-base;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: #ca305f;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../img/icon-login-desktop.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &:hover,
+        &:focus {
+          background-color: #b03057;
         }
 
-        .nta_login {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
+        &:active {
+          background-color: #fff;
+          border: 1px solid #b03057;
+          color: #b03057;
+        }
+      }
+    }
+  }
 
-            p {
-                font-family: $font-primary;
-                font-weight: 400;
-                font-size: $fs-md;
-                color: #555;
-                margin: 0;
+  .nta_main-slider {
+    margin-bottom: 27px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 10px;
+    height: 420px;
+
+    .nta_main-slider__swiper {
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      overflow: hidden;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          width: 100%;
+          height: 100%;
+          background: #fff, rgba(0, 0, 0, 0.2);
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .nta_main-image {
+    width: 100%;
+    max-width: 1080px;
+    height: 410px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+
+    &__wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+
+      &-block:nth-child(1) {
+        position: absolute;
+        top: 301px;
+        left: 124px;
+      }
+      &-block:nth-child(2) {
+        position: absolute;
+        top: 41px;
+        left: 329px;
+      }
+      &-block:nth-child(3) {
+        position: absolute;
+        top: 143px;
+        right: 43px;
+      }
+      &-block {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid #fff;
+        border-radius: 40px;
+        padding: 12px 16px;
+        width: auto;
+        max-width: 225px;
+        height: 54px;
+
+        img {
+          width: 38px;
+          height: 30px;
+          object-fit: contain;
+        }
+
+        p {
+          font-family: $montserrat-medium;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 129%;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .nta_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 1080px;
+
+    .nta_main-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0;
+      background: #222;
+      border-radius: 20px;
+
+      li {
+        list-style: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: "";
+          background-color: #ca305f;
+          width: 1px;
+          height: 31px;
+        }
+
+        &:last-child::after {
+          display: none;
+        }
+
+        &.active a {
+          color: #fff;
+        }
+
+        a {
+          @extend %transition-base;
+          width: 100%;
+          height: 66px;
+          padding: 16px 31px;
+          border-radius: 100px;
+          border: 0;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          font-family: $font-primary;
+          font-weight: 400;
+          font-size: $fs-sm;
+          text-align: center;
+          color: $white;
+
+          &:hover {
+            color: $yellow;
+          }
+
+          &.active {
+            color: $yellow;
+          }
+
+          &:hover::after,
+          &.active::after {
+            background-image: url("../img/icon-white.svg");
+          }
+        }
+      }
+
+      .nta_active-podmenu {
+        position: relative;
+
+        > a {
+          &::after {
+            content: "";
+            position: relative;
+            margin-left: 2px;
+            width: 16px;
+            height: 16px;
+            background-image: url("../img/icon-white.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            @extend %transition-base;
+          }
+
+          &.active,
+          &:hover {
+            color: $yellow;
+          }
+        }
+
+        &:hover > a::after {
+          background-image: url("../img/icon-gray.svg");
+        }
+
+        &:hover > a.active::after {
+          background-image: url("../img/icon-white.svg");
+        }
+
+        .nta_podmenu {
+          display: flex;
+          position: absolute;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          padding: 16px 31px;
+          left: 0;
+          background: $black;
+          // border-radius: 30px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          z-index: 1000;
+          opacity: 0;
+          visibility: hidden;
+          top: 66px;
+          // transform: translateY(1px);
+          transition: all $transition-def;
+
+          li {
+            &::after {
+              display: none;
+            }
+
+            &.nta_active a {
+              color: $yellow;
             }
 
             a {
-                border-radius: 100px;
-                width: 180px;
-                height: 46px;
-                background: #eb492a;
-                font-family: $font-primary;
-                font-weight: 400;
-                font-size: $fs-sm;
-                text-align: center;
-                color: #fff;
-                transition: $transition-def;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
+              font-family: $font-primary;
+              font-weight: 400;
+              font-size: $fs-sm;
+              color: $white;
+              text-align: left;
+              text-decoration: none;
+              background: none;
+              border: none;
+              border-radius: 0;
+              padding: 0;
+              width: auto;
+              height: auto;
+              justify-content: flex-start;
+              display: flex;
 
-                &:hover,
-                &:focus {
-                    background: #a21e05;
-                    transition: $transition-def;
-                }
-
-                &:active {
-                    background: #fff;
-                    border: 1px solid #eb492a;
-                    color: #eb492a;
-                    transition: $transition-def;
-                }
+              &:hover,
+              &:focus,
+              &:active {
+                color: $yellow;
+                opacity: 1;
+              }
             }
+          }
         }
-    }
 
-    .nta_main-slider {
-        margin-bottom: 27px;
-        position: relative;
-        width: 100%;
-        max-width: 1100px;
-        padding: 0px 10px;
-        height: 420px;
-
-        .nta_main-slider__swiper {
-            width: 100%;
-            height: 100%;
-            border-radius: 30px;
-            overflow: hidden;
-
-            .swiper-wrapper {
-                .swiper-slide {
-                    width: 100%;
-                    height: 100%;
-                    background: #fff, rgba(0, 0, 0, 0.2);
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
+        &:hover .nta_podmenu {
+          opacity: 1;
+          visibility: visible;
+          // transform: translateY(100px);
         }
+      }
     }
-
-    .nta_menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px 10px;
-
-        .nta_main-menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 17px;
-            padding: 0;
-
-            li {
-                list-style: none;
-                position: relative;
-
-                // Стили для активного обычного пункта меню
-                &.active {
-                    a {
-                        background: #555;
-                        color: #fff;
-                        transition: $transition-def;
-
-                        &::after {
-                            background-image: url("../img/icon-white.svg");
-                        }
-                    }
-                }
-
-                a {
-                    border: 0px solid #000;
-                    border-radius: 100px;
-                    padding: 16px 31px;
-                    width: 100%;
-                    background: #d5e2e9;
-                    height: 46px;
-                    text-decoration: none;
-                    font-family: $font-primary;
-                    font-weight: 400;
-                    font-size: $fs-sm;
-                    text-align: center;
-                    color: #555;
-                    transition: $transition-def;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-
-                    &:hover {
-                        color: $gray;
-                        background: #fff2b0;
-                        transition: $transition-def;
-
-                        &::after {
-                            background-image: url("../img/icon-gray.svg");
-                        }
-                    }
-
-                    // Активное состояние для любой ссылки
-                    &.active {
-                        background: #555;
-                        color: #fff;
-                        transition: $transition-def;
-
-                        &::after {
-                            background-image: url("../img/icon-white.svg");
-                        }
-
-                        // При наведении на активную ссылку сохраняем активные стили
-                        &:hover {
-                            background: #555;
-                            color: #fff;
-
-                            &::after {
-                                background-image: url("../img/icon-white.svg");
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Стили для пунктов с подменю
-            .nta_active-podmenu {
-                position: relative;
-
-                >a {
-                    &::after {
-                        content: '';
-                        margin-left: 2px;
-                        position: relative;
-                        width: 16px;
-                        height: 16px;
-                        background-image: url("../img/icon-gray.svg");
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        transition: all $transition-def;
-                    }
-
-                    // Активное состояние для ссылки с подменю (после клика)
-                    &.active {
-                        background: #555;
-                        color: #fff;
-
-                        &::after {
-                            background-image: url("../img/icon-white.svg");
-                        }
-
-                        // При наведении на активную ссылку с подменю
-                        &:hover {
-                            background: #555;
-                            color: #fff;
-
-                            &::after {
-                                background-image: url("../img/icon-white.svg");
-                            }
-                        }
-                    }
-                }
-
-                // При наведении на пункт с подменю
-                &:hover {
-                    >a {
-                        background: #fff2b0;
-                        color: $gray;
-
-                        &::after {
-                            background-image: url("../img/icon-gray.svg");
-                        }
-
-                        // Если ссылка активна, при наведении на подменю оставляем активные стили
-                        &.active {
-                            background: #555;
-                            color: #fff;
-
-                            &::after {
-                                background-image: url("../img/icon-white.svg");
-                            }
-                        }
-                    }
-
-                    .nta_podmenu {
-                        display: flex;
-                        opacity: 1;
-                        visibility: visible;
-                        transform: translateY(8px);
-                    }
-                }
-
-                .nta_podmenu {
-                    display: flex;
-                    position: absolute;
-                    flex-direction: column;
-                    border: 0px solid #000;
-                    border-radius: 30px;
-                    padding: 16px 31px;
-                    width: 219px;
-                    height: auto;
-                    background: #d5e2e9;
-                    left: 0;
-                    gap: 8px;
-                    z-index: 1000;
-                    opacity: 0;
-                    visibility: hidden;
-                    transform: translateY(-10px);
-                    transition: all $transition-def;
-
-                    li {
-                        &.nta_active {
-                            a {
-                                color: #555;
-                                opacity: 0.4;
-                            }
-                        }
-
-                        a {
-                            font-family: $font-primary;
-                            font-weight: 400;
-                            font-size: $fs-sm;
-                            text-align: left;
-                            color: #555;
-                            text-decoration: none;
-                            border: none;
-                            border-radius: 0;
-                            background: none;
-                            padding: 0px;
-                            width: auto;
-                            height: auto;
-                            justify-content: flex-start;
-
-                            &::after {
-                                display: none;
-                            }
-
-                            &:hover {
-                                background: none;
-                                color: #fff2b0;
-                                opacity: 1;
-                                transition: $transition-def;
-                            }
-
-                            &:focus,
-                            &:active {
-                                background: none;
-                                opacity: 0.4;
-                                transition: $transition-def;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-} 
+  }
+}
