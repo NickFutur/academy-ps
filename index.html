@@ -22,7 +22,7 @@
             <div class="nta_login">
                 <a class="nta_login-link" href="">
                 </a>
-                <button class="nta_menu-burger-btn">
+                <button class="nta_menu-burger-btn" id="open-mobile-menu">
                     <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="32" height="1" fill="black" />
                         <rect y="10" width="32" height="1" fill="black" />
@@ -57,8 +57,13 @@
         </nav>
         <div class="nta_main-image">
             <div class="nta_main-image__wrapper">
-                <img src="img/header-main-1x.png" alt="фото главной страницы"
-                    srcset="img/header-main-1x.png 1x, img/header-main-2x.png 2x">
+                <picture>
+                    <source media="(max-width: 480px)"
+                        srcset="img/header-main-1x-mobile.png 1x, img/header-main-2x-mobile.png 2x">
+                    <img src="img/header-main-1x.png" srcset="img/header-main-1x.png 1x, img/header-main-2x.png 2x"
+                        alt="фото главной страницы">
+                </picture>
+
                 <div class="nta_main-image__content">
                     <div class="nta_main-image__content-block">
                         <img src="img/academy_logo-small.svg" alt="logo">
@@ -188,9 +193,76 @@
     </main>
     <footer>
         <div class="footer-block">
-            <div class="footer-block__copyright">© 2001-2026 «Академия успеха»</div>
+            <div class="footer-block__copyright">
+                <p>© 2001-2026 «Академия успеха»</p>
+            </div>
         </div>
     </footer>
+    <div class="mobile-menu">
+        <div class="mobile-menu__top">
+            <a href="/" class="mobile-menu__logo">
+                <img src="img/logo.svg" alt="Академия профессионального успеха">
+            </a>
+
+            <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item mobile-menu__item--has-dropdown">
+                    <div class="mobile-menu__row">
+                        <a href="#" class="mobile-menu__link">Рабочие программы</a>
+
+                        <button class="mobile-menu__toggle" type="button" aria-expanded="false"
+                            aria-label="Открыть подменю">
+                            <span class="mobile-menu__arrow"></span>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu__dropdown">
+                        <li><a href="#">Программа 1</a></li>
+                        <li><a href="#">Программа 2</a></li>
+                        <li><a href="#">Программа 3</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu__item mobile-menu__item--has-dropdown">
+                    <div class="mobile-menu__row">
+                        <a href="#" class="mobile-menu__link">Расписание</a>
+
+                        <button class="mobile-menu__toggle" type="button" aria-expanded="false"
+                            aria-label="Открыть подменю">
+                            <span class="mobile-menu__arrow"></span>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu__dropdown">
+                        <li><a href="#">Очное обучение</a></li>
+                        <li><a href="#">Онлайн обучение</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a href="#">Слушателям</a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a href="#">Отзывы</a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="mobile-menu__bottom">
+            <a href="#" class="mobile-menu__login">Войти</a>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,12 +1,33 @@
 @use "fonts";
 @use "variables" as *;
 
-@media (max-width: 1080px) {
+@media (min-width: 1081px) {
   .nta_header {
     .nta_header-block {
       .nta_login {
+        .nta_menu-burger-btn {
+          display: none;
+        }
+      }
+    }
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .nta_header {
+    .nta_header-block {
+      .nta_logo {
+        height: 43px;
+        width: 166px;
+      }
+      .nta_login {
         flex-direction: row;
         a {
+          width: 24px;
+          height: 26px;
           background-color: $white;
           background-image: url("../img/icon-login-mobile.svg");
 
@@ -27,6 +48,308 @@
     }
     .nta_menu {
       display: none;
+    }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 24px 10px 40px;
+    background: $white;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+
+    &__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      gap: 16px;
+    }
+
+    &__logo {
+      display: inline-block;
+      max-width: 187px;
+      width: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    &__row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__close {
+      position: relative;
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 10px;
+      background: #f1f1f1;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #e1e1e1;
+        transition: all 0.2s ease;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 1px;
+        background: #3a3a3a;
+        transform-origin: center;
+      }
+
+      span:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      span:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &__nav {
+      margin-bottom: 56px;
+    }
+
+    &__link {
+      text-decoration: none;
+      padding: 24px 12px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: #ca305f;
+        transition: all 0.2s ease;
+      }
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0 12px;
+      list-style: none;
+    }
+
+    &__item {
+      border-bottom: 1px solid #cfcfcf;
+
+      > a {
+        display: block;
+        padding: 24px 12px;
+        font-size: $fs-md;
+        line-height: 140%;
+        color: #000;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #ca305f;
+          transition: all 0.2s ease;
+        }
+      }
+
+      &--has-dropdown {
+        padding: 0;
+      }
+    }
+
+    &__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
+      padding: 24px 12px;
+      border: 0;
+      background: transparent;
+      font-size: $fs-md;
+      line-height: 140%;
+      color: #000;
+      text-align: right;
+      cursor: pointer;
+      flex: 1;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: #ca305f;
+      }
+    }
+
+    &__arrow {
+      position: relative;
+      flex-shrink: 0;
+      width: 12px;
+      height: 12px;
+      margin-left: 12px;
+      transition: transform 0.25s ease;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 7px;
+        height: 1px;
+        background: currentColor;
+      }
+
+      &::before {
+        left: 0;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        right: 0;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+
+    &__item.is-active &__arrow {
+      transform: rotate(180deg);
+    }
+
+    &__dropdown {
+      max-height: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0 12px;
+      list-style: none;
+      transition: max-height 0.3s ease;
+
+      li {
+        &:last-child a {
+          padding-bottom: 20px;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 0 12px 16px;
+        font-size: 15px;
+        line-height: 140%;
+        color: #4b4b4b;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #ca305f;
+        }
+      }
+    }
+
+    &__item.is-active &__dropdown {
+      max-height: 500px;
+    }
+
+    &__bottom {
+      margin-top: auto;
+    }
+
+    &__login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 64px;
+      width: 100%;
+      border-radius: 40px;
+      background: #ca305f;
+      font-size: 17px;
+      line-height: 1;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    &__login:hover {
+      background: #b9285a;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nta_double-wrap {
+    .nta_dop-wrapper {
+      width: 100%;
+      max-width: 340px;
+      align-self: flex-end;
+      padding: 0px 16px;
+
+      .nta_left-menu {
+        ul {
+          gap: 16px;
+        }
+      }
+    }
+    .nta_main-wrapper {
+      .nta_content-info {
+        padding: 20px 20px 28px 20px;
+
+        ol {
+          padding-left: 16px;
+        }
+      }
+      .nta_content-info:last-child {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .nta_header {
+    .nta_main-image {
+      height: 493px;
+    }
+    .nta_main-image__content-block:nth-child(1) {
+      top: 262px;
+      left: 18px;
+    }
+    .nta_main-image__content-block:nth-child(2) {
+      top: 34px;
+      left: 56px;
+    }
+    .nta_main-image__content-block:nth-child(3) {
+      top: 362px;
+      right: 19px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .nta_header {
+    .nta_logo {
+      flex: 1;
     }
   }
 }

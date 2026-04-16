@@ -61,12 +61,15 @@
     justify-content: center;
     height: 154px;
     width: 100%;
+
     p {
       font-family: $font-primary;
       font-weight: $fw-regular;
       font-size: 14px;
       line-height: 143%;
       color: #000;
+      padding: 0px 10px;
+      text-align: center;
     }
   }
 }

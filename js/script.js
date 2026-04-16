@@ -232,3 +232,84 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("open-mobile-menu");
+  const menu = document.querySelector(".mobile-menu");
+  const closeBtn = document.querySelector(".mobile-menu__close");
+
+  if (!openBtn || !menu || !closeBtn) return;
+
+  const body = document.body;
+  let scrollY = 0;
+
+  const openMenu = () => {
+    scrollY = window.scrollY;
+
+    menu.classList.add("is-open");
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+  };
+
+  const closeMenu = () => {
+    menu.classList.remove("is-open");
+    body.style.position = "";
+    body.style.top = "";
+    body.style.left = "";
+    body.style.width = "";
+    body.style.overflow = "";
+    window.scrollTo(0, scrollY);
+
+    menu.querySelectorAll(".mobile-menu__item.is-active").forEach((item) => {
+      item.classList.remove("is-active");
+
+      const toggle = item.querySelector(".mobile-menu__toggle");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  };
+
+  const closeAllDropdowns = () => {
+    menu.querySelectorAll(".mobile-menu__item.is-active").forEach((item) => {
+      item.classList.remove("is-active");
+
+      const toggle = item.querySelector(".mobile-menu__toggle");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  };
+
+  openBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+
+  menu.addEventListener("click", (e) => {
+    const toggle = e.target.closest(".mobile-menu__toggle");
+    const linkInsideDropdown = e.target.closest(".mobile-menu__dropdown a");
+    const regularLink = e.target.closest(
+      ".mobile-menu__item > .mobile-menu__link, .mobile-menu__row > .mobile-menu__link, .mobile-menu__login",
+    );
+
+    if (toggle) {
+      const currentItem = toggle.closest(".mobile-menu__item");
+      const isActive = currentItem.classList.contains("is-active");
+
+      closeAllDropdowns();
+
+      if (!isActive) {
+        currentItem.classList.add("is-active");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+
+      return;
+    }
+
+    if (linkInsideDropdown || regularLink) {
+      closeMenu();
+    }
+  });
+});
