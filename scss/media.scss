@@ -313,6 +313,18 @@
             bottom: 50px;
             right: 10%;
           }
+          &-block--listeners:nth-child(1) {
+            left: 10%;
+            // top: 230px;
+          }
+          &-block--listeners:nth-child(2) {
+            right: auto;
+            left: 30%;
+          }
+          &-block--listeners:nth-child(3) {
+            bottom: 120px;
+            right: 5%;
+          }
         }
       }
     }
@@ -379,6 +391,20 @@
           &-block--program:nth-child(3) {
             bottom: 117px;
             right: 34px;
+          }
+          &-block--listeners:nth-child(1) {
+            left: 25px;
+            top: 43px;
+          }
+          &-block--listeners:nth-child(2) {
+            bottom: 172px;
+            right: 13px;
+            left: auto;
+          }
+          &-block--listeners:nth-child(3) {
+            right: 86px;
+            left: auto;
+            bottom: 78px;
           }
         }
       }

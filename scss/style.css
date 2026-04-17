@@ -195,6 +195,21 @@ html {
   right: 81px;
   top: auto;
 }
+.nta_header .nta_main-image__content .nta_main-image__content-block--listeners:nth-child(1) {
+  top: 35px;
+  left: 69px;
+}
+.nta_header .nta_main-image__content .nta_main-image__content-block--listeners:nth-child(2) {
+  top: auto;
+  bottom: 55px;
+  left: auto;
+  right: 402px;
+}
+.nta_header .nta_main-image__content .nta_main-image__content-block--listeners:nth-child(3) {
+  bottom: 109px;
+  right: 78px;
+  top: auto;
+}
 .nta_header .nta_main-image__content-block {
   position: absolute;
   display: flex;
@@ -618,6 +633,9 @@ html {
   width: 100%;
   max-width: 252px;
   min-height: 346px;
+}
+.nta_main-wrapper .nta_cards-block__card--listener {
+  min-height: 286px;
 }
 .nta_main-wrapper .nta_cards-block__card-img {
   width: 100%;
