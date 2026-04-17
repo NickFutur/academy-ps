@@ -181,6 +181,20 @@ html {
     right: 5%;
   }
 }
+.nta_header .nta_main-image__content .nta_main-image__content-block--program:nth-child(1) {
+  top: 254px;
+  left: 152px;
+}
+.nta_header .nta_main-image__content .nta_main-image__content-block--program:nth-child(2) {
+  top: 47px;
+  left: auto;
+  right: 384px;
+}
+.nta_header .nta_main-image__content .nta_main-image__content-block--program:nth-child(3) {
+  bottom: 60px;
+  right: 81px;
+  top: auto;
+}
 .nta_header .nta_main-image__content-block {
   position: absolute;
   display: flex;
@@ -506,7 +520,7 @@ html {
   width: 100%;
   max-width: 655px;
   line-height: 150%;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .nta_double-wrap .nta_main-wrapper b {
   font-family: "GothamPro-Bold", sans-serif;
@@ -588,6 +602,87 @@ html {
   width: 113px;
   height: 100px;
   margin-bottom: 16px;
+}
+.nta_main-wrapper .nta_cards-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.nta_main-wrapper .nta_cards-block__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #222;
+  border-radius: 20px;
+  padding: 16px 20px 28px;
+  width: 100%;
+  max-width: 252px;
+  min-height: 346px;
+}
+.nta_main-wrapper .nta_cards-block__card-img {
+  width: 100%;
+  height: 100%;
+  max-height: 102px;
+}
+.nta_main-wrapper .nta_cards-block__card-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.nta_main-wrapper .nta_cards-block__card-txt h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.nta_main-wrapper .nta_cards-block__card-txt p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.nta_main-wrapper .nta_cards-block__card-txt--red p {
+  color: #ca305f;
+}
+.nta_main-wrapper .nta_cards-block__card-txt--yellow p {
+  color: #ffd503;
+}
+.nta_main-wrapper .nta_cards-block__card-txt--blue p {
+  color: #00aeef;
+}
+.nta_main-wrapper .nta_cards-block__card-btn a {
+  margin-top: 16px;
+  border: 1px solid transparent;
+  background: linear-gradient(150deg, rgba(132, 132, 132, 0.14) 10.85%, rgba(165, 165, 165, 0.14) 55.29%, rgba(153, 153, 153, 0.14) 100%) padding-box, linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.38) 50%, rgba(255, 255, 255, 0.16) 100%) border-box;
+  border-radius: 37px;
+  padding: 9.5px 0px;
+  width: 212px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+}
+.nta_main-wrapper .nta_cards-block__card-btn--red a:hover {
+  border: 1px solid #ca305f;
+  opacity: 1;
+}
+.nta_main-wrapper .nta_cards-block__card-btn--yellow a:hover {
+  border: 1px solid #ffd503;
+  opacity: 1;
+}
+.nta_main-wrapper .nta_cards-block__card-btn--blue a:hover {
+  border: 1px solid #00aeef;
+  opacity: 1;
 }
 
 .nta_double-wrap .nta_main-wrapper .nta_not-found {
@@ -762,49 +857,53 @@ h2 {
   font-family: "GothamPro-Bold", sans-serif;
   font-weight: 700;
   font-size: 32px;
-  color: #555;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
 }
 
 h3 {
   font-family: "GothamPro-Bold", sans-serif;
   font-weight: 700;
   font-size: 28px;
-  color: #555;
+  color: #000;
 }
 
 h4 {
   font-family: "GothamPro-Bold", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  color: #555;
+  color: #000;
 }
 
 h5 {
   font-family: "GothamPro-Bold", sans-serif;
   font-weight: 700;
   font-size: 20px;
-  color: #555;
+  color: #000;
 }
 
 h6 {
   font-family: "GothamPro-Bold", sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: #555;
+  color: #000;
 }
 
 p {
   font-family: "GothamPro", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #555;
+  color: #000;
 }
 
 a {
   font-family: "GothamPro", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #555;
+  color: #000;
   transition: all 0.3s ease;
 }
 

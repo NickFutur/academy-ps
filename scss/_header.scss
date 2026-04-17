@@ -171,6 +171,20 @@ html {
           right: 5%;
         }
       }
+      .nta_main-image__content-block--program:nth-child(1) {
+        top: 254px;
+        left: 152px;
+      }
+      .nta_main-image__content-block--program:nth-child(2) {
+        top: 47px;
+        left: auto;
+        right: 384px;
+      }
+      .nta_main-image__content-block--program:nth-child(3) {
+        bottom: 60px;
+        right: 81px;
+        top: auto;
+      }
       &-block {
         position: absolute;
         display: flex;
