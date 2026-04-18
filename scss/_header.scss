@@ -200,6 +200,22 @@ html {
         right: 78px;
         top: auto;
       }
+      .nta_main-image__content-block--reviews:nth-child(1) {
+        top: auto;
+        bottom: 131px;
+        left: 83px;
+      }
+      .nta_main-image__content-block--reviews:nth-child(2) {
+        top: auto;
+        bottom: 33px;
+        left: 357px;
+        right: auto;
+      }
+      .nta_mainz-image__content-block--reviews:nth-child(3) {
+        bottom: auto;
+        right: 142px;
+        top: 55px;
+      }
       &-block {
         position: absolute;
         display: flex;

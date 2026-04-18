@@ -19,27 +19,37 @@
   font-style: normal;
   font-display: swap;
 }
-main .nta_main-reviews {
+main .nta_double-wrap .nta_main-wrapper .nta_reviews-wrap {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 806px;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
   height: auto;
   border: 1px solid #000;
   border-radius: 20px;
   padding: 20px 40px 24px;
-  margin-bottom: 16px;
+  background: #f8fbfb;
 }
-main .nta_main-name {
+main .nta_double-wrap .nta_main-wrapper .nta_main-name {
   display: flex;
   flex-direction: row;
   gap: 8px;
   border-bottom: 1px solid #000;
 }
-main .nta_main-review {
+main .nta_double-wrap .nta_main-wrapper .nta_main-name p {
+  margin-bottom: 4px;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-review {
   display: flex;
   flex-direction: row;
   gap: 8px;
   border-bottom: 1px solid #000;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-review p {
+  margin-bottom: 4px;
 }/*# sourceMappingURL=reviews.css.map */

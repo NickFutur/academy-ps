@@ -210,6 +210,22 @@ html {
   right: 78px;
   top: auto;
 }
+.nta_header .nta_main-image__content .nta_main-image__content-block--reviews:nth-child(1) {
+  top: auto;
+  bottom: 131px;
+  left: 83px;
+}
+.nta_header .nta_main-image__content .nta_main-image__content-block--reviews:nth-child(2) {
+  top: auto;
+  bottom: 33px;
+  left: 357px;
+  right: auto;
+}
+.nta_header .nta_main-image__content .nta_mainz-image__content-block--reviews:nth-child(3) {
+  bottom: auto;
+  right: 142px;
+  top: 55px;
+}
 .nta_header .nta_main-image__content-block {
   position: absolute;
   display: flex;
@@ -432,7 +448,6 @@ html {
 
 .nta_double-wrap {
   display: flex;
-  flex-wrap: wrap-reverse;
   width: 100%;
   justify-content: center;
   max-width: 1080px;
@@ -870,24 +885,28 @@ html {
   color: #eb492a;
 }
 
-main .nta_main-wrapper__reviews {
+main .nta_double-wrap .nta_main-wrapper .nta_reviews-wrap {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 806px;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
-  height: 108px;
+  height: auto;
   border: 1px solid #000;
   border-radius: 20px;
   padding: 20px 40px 24px;
 }
-main .nta_main-wrapper__name {
+main .nta_double-wrap .nta_main-wrapper .nta_main-name {
   display: flex;
   flex-direction: row;
   gap: 8px;
   border-bottom: 1px solid #000;
 }
-main .nta_main-wrapper__review {
+main .nta_double-wrap .nta_main-wrapper .nta_main-review {
   display: flex;
   flex-direction: row;
   gap: 8px;

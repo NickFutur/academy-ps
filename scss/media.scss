@@ -325,6 +325,12 @@
             bottom: 120px;
             right: 5%;
           }
+           &-block--reviews:nth-child(1) {
+            left: 10%;
+          }
+          &-block--reviews:nth-child(2) {
+            left: 30%;
+          }
         }
       }
     }
@@ -332,11 +338,12 @@
   .nta_double-wrap {
     .nta_dop-wrapper {
       width: 100%;
-      max-width: 340px;
+      
       align-self: flex-end;
       padding: 0px 16px;
 
       .nta_left-menu {
+        max-width: 340px;
         ul {
           gap: 16px;
         }
@@ -405,6 +412,20 @@
             right: 86px;
             left: auto;
             bottom: 78px;
+          }
+          &-block--reviews:nth-child(1) {
+            left: 29px;
+            top: 43px;
+            bottom: auto;
+          }
+          &-block--reviews:nth-child(2) {
+            bottom: 142px;
+            left: 29px;
+          }
+          &-block--reviews:nth-child(3) {
+            right: 38px;
+            top: auto;
+            bottom: 54px;
           }
         }
       }
