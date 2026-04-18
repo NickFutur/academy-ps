@@ -3,14 +3,11 @@
 
 main {
     .nta_double-wrap {
-        // display: flex;
-        // flex-direction: column;
+      
     
 
     .nta_main-wrapper {
-        // display: flex;
-        // flex-direction: column;
-        // height: auto;
+       
 .nta_reviews-wrap{
     display: flex;
     flex-direction: column;
@@ -35,6 +32,11 @@ main {
             flex-direction: row;
             gap: 8px;
             border-bottom: 1px solid #000;
+            .name{
+                max-width: 69px;
+                width: 100%;
+                text-wrap: nowrap;
+            }
             p{
                 margin-bottom: 4px;
             }
@@ -45,6 +47,11 @@ main {
             flex-direction: row;
             gap: 8px;
             border-bottom: 1px solid #000;
+            .review{
+                max-width: 60px;
+                width: 100%;
+                text-wrap: nowrap;
+            }
             p{
                 margin-bottom: 4px;
             }

@@ -41,6 +41,11 @@ main .nta_double-wrap .nta_main-wrapper .nta_main-name {
   gap: 8px;
   border-bottom: 1px solid #000;
 }
+main .nta_double-wrap .nta_main-wrapper .nta_main-name .name {
+  max-width: 69px;
+  width: 100%;
+  text-wrap: nowrap;
+}
 main .nta_double-wrap .nta_main-wrapper .nta_main-name p {
   margin-bottom: 4px;
 }
@@ -49,6 +54,11 @@ main .nta_double-wrap .nta_main-wrapper .nta_main-review {
   flex-direction: row;
   gap: 8px;
   border-bottom: 1px solid #000;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-review .review {
+  max-width: 60px;
+  width: 100%;
+  text-wrap: nowrap;
 }
 main .nta_double-wrap .nta_main-wrapper .nta_main-review p {
   margin-bottom: 4px;
