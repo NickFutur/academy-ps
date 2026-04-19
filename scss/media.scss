@@ -331,6 +331,15 @@
           &-block--reviews:nth-child(2) {
             left: 30%;
           }
+           &-block--contacts:nth-child(1) {
+            left: 11%;
+          }
+          &-block--contacts:nth-child(2) {
+        right: 30%;
+          }
+          &-block--contacts:nth-child(3) {
+        right: 81px;
+          }
         }
       }
     }
@@ -427,10 +436,31 @@
             top: auto;
             bottom: 54px;
           }
+           &-block--contacts:nth-child(1) {
+            left:17px;
+            top: 43px;
+          }
+          &-block--contacts:nth-child(2) {
+            bottom: 150px;
+            left: 17px;
+          }
+          &-block--contacts:nth-child(3) {
+            right: 24px;
+            bottom: 75px;
+          }
         }
       }
     }
   }
+
+.nta_double-wrap{
+    .nta_main-wrapper{
+         .nta_contacts-map{
+                height: 346px;
+            }
+    }
+}
+
 }
 
 @media (max-width: 320px) {

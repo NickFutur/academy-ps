@@ -1,0 +1,35 @@
+@use "fonts";
+@use "variables" as *;
+
+.nta_double-wrap{
+    .nta_main-wrapper{
+        .nta_contacts-wrap{
+            .nta_contacts-block{
+                margin-bottom: 16px;
+                h6{
+                margin-bottom: 0px;
+                }
+                p{
+                    margin-bottom: 0px;
+                }
+                a{
+                    color: $black;
+                    &:hover, &:focus, &:active{
+                        opacity: 0.8;
+                    };
+                }
+            }
+           
+        }
+         .nta_contacts-map{
+                width: 100%;
+                height: 486px;
+                margin-top: 16px;
+
+                iframe{
+                border-radius: 20px;
+                overflow: hidden;
+                }
+            }
+    }
+}

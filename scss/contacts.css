@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothamPro-Bold";
+  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothamPro-Light";
+  src: url("../fonts/GothamPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block {
+  margin-bottom: 16px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block h6 {
+  margin-bottom: 0px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block p {
+  margin-bottom: 0px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a {
+  color: #222;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a:hover, .nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a:focus, .nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a:active {
+  opacity: 0.8;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-map {
+  width: 100%;
+  height: 486px;
+  margin-top: 16px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-map iframe {
+  border-radius: 20px;
+  overflow: hidden;
+}/*# sourceMappingURL=contacts.css.map */

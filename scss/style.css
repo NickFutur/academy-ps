@@ -226,6 +226,21 @@ html {
   right: 142px;
   top: 55px;
 }
+.nta_header .nta_main-image__content .nta_main-image__content-block--contacts:nth-child(1) {
+  top: 49px;
+  left: 97px;
+}
+.nta_header .nta_main-image__content .nta_main-image__content-block--contacts:nth-child(2) {
+  top: auto;
+  bottom: 109px;
+  left: auto;
+  right: 335px;
+}
+.nta_header .nta_main-image__content .nta_main-image__content-block--contacts:nth-child(3) {
+  bottom: 41px;
+  right: 81px;
+  top: auto;
+}
 .nta_header .nta_main-image__content-block {
   position: absolute;
   display: flex;
@@ -899,6 +914,7 @@ main .nta_double-wrap .nta_main-wrapper .nta_main-reviews {
   border: 1px solid #000;
   border-radius: 20px;
   padding: 20px 40px 24px;
+  background: #f8fbfb;
 }
 main .nta_double-wrap .nta_main-wrapper .nta_main-name {
   display: flex;
@@ -906,11 +922,52 @@ main .nta_double-wrap .nta_main-wrapper .nta_main-name {
   gap: 8px;
   border-bottom: 1px solid #000;
 }
+main .nta_double-wrap .nta_main-wrapper .nta_main-name .name {
+  max-width: 69px;
+  width: 100%;
+  text-wrap: nowrap;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-name p {
+  margin-bottom: 4px;
+}
 main .nta_double-wrap .nta_main-wrapper .nta_main-review {
   display: flex;
   flex-direction: row;
   gap: 8px;
   border-bottom: 1px solid #000;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-review .review {
+  max-width: 60px;
+  width: 100%;
+  text-wrap: nowrap;
+}
+main .nta_double-wrap .nta_main-wrapper .nta_main-review p {
+  margin-bottom: 4px;
+}
+
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block {
+  margin-bottom: 16px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block h6 {
+  margin-bottom: 0px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block p {
+  margin-bottom: 0px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a {
+  color: #222;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a:hover, .nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a:focus, .nta_double-wrap .nta_main-wrapper .nta_contacts-wrap .nta_contacts-block a:active {
+  opacity: 0.8;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-map {
+  width: 100%;
+  height: 486px;
+  margin-top: 16px;
+}
+.nta_double-wrap .nta_main-wrapper .nta_contacts-map iframe {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 h1,
