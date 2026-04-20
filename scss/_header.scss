@@ -356,11 +356,15 @@ html {
         }
 
         &:hover > a::after {
-          background-image: url("../img/icon-gray.svg");
+          background-image: url("../img/icon-yellow.svg");
         }
 
         &:hover > a.active::after {
           background-image: url("../img/icon-white.svg");
+        }
+
+        &.active > a.active::after {
+          background-image: url("../img/icon-yellow.svg");
         }
 
         .nta_podmenu {

@@ -30,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailError = document.querySelector(".nta_email label");
   const passwordError = document.querySelector(".nta_password label");
 
+  if (!form || !emailInput || !passwordInput || !emailError || !passwordError) {
+    return;
+  }
+
   // Функция проверки email
   function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -119,6 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".nta_main-menu");
 
+  if (!menu) return;
+
   // Функция для установки активного элемента
   function setActiveMenuItem(clickedLink) {
     // Удаляем активные классы со всех элементов
@@ -177,7 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Обработчик клика для всех ссылок меню
   menu.addEventListener("click", function (e) {
     if (e.target.tagName === "A") {
-      e.preventDefault();
+      const href = (e.target.getAttribute("href") || "").trim();
+      const isPlaceholderLink =
+        href === "" || href === "#" || href.startsWith("javascript:");
+
+      // Блокируем переход только для ссылок-заглушек, чтобы меню могло
+      // раскрывать подменю без перезагрузки страницы.
+      if (isPlaceholderLink) {
+        e.preventDefault();
+      }
+
       setActiveMenuItem(e.target);
     }
   });

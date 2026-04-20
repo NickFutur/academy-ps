@@ -346,10 +346,13 @@ html {
   color: #ffd503;
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover > a::after {
-  background-image: url("../img/icon-gray.svg");
+  background-image: url("../img/icon-yellow.svg");
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu:hover > a.active::after {
   background-image: url("../img/icon-white.svg");
+}
+.nta_header .nta_menu .nta_main-menu .nta_active-podmenu.active > a.active::after {
+  background-image: url("../img/icon-yellow.svg");
 }
 .nta_header .nta_menu .nta_main-menu .nta_active-podmenu .nta_podmenu {
   display: flex;
