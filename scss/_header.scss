@@ -70,20 +70,14 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url("../img/icon-login-desktop.svg");
+        background-image: url("../img/academy_logo-white.svg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 20px 23px;
 
         &:hover,
         &:focus {
           background-color: #b03057;
-        }
-
-        &:active {
-          background-color: #fff;
-          border: 1px solid #b03057;
-          color: #b03057;
         }
       }
     }

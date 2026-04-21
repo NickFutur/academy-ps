@@ -86,18 +86,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../img/icon-login-desktop.svg");
+  background-image: url("../img/academy_logo-white.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 20px 23px;
 }
 .nta_header .nta_header-block .nta_login a:hover, .nta_header .nta_header-block .nta_login a:focus {
   background-color: #b03057;
-}
-.nta_header .nta_header-block .nta_login a:active {
-  background-color: #fff;
-  border: 1px solid #b03057;
-  color: #b03057;
 }
 .nta_header .nta_main-slider {
   margin-bottom: 27px;
