@@ -9,44 +9,77 @@
     <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <script src="js/swiper-bundle.min.js" defer></script>
     <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/media.css">
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <header class="nta_header">
         <div class="nta_header-block">
-            <div class="nta_logo">
+            <a href="index.html" class="nta_logo">
                 <img src="img/logo.svg" alt="logo academy-ps">
-            </div>
+            </a>
             <div class="nta_login">
-                <p>Личный кабинет:</p>
-                <a href="">Войти</a>
+                <a class="nta_login-link" href="acount.html">
+                </a>
+                <button class="nta_menu-burger-btn" id="open-mobile-menu">
+                    <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="1" fill="black" />
+                        <rect y="10" width="32" height="1" fill="black" />
+                        <rect y="20" width="32" height="1" fill="black" />
+                    </svg>
+                </button>
             </div>
         </div>
         <nav class="nta_menu">
             <ul class="nta_main-menu">
-                <li class="active"><a href="#">Главная</a></li>
-                <li><a href="#">Рабочие программы</a>
+                <li><a href="/">Главная</a></li>
+                <li><a href="programms.html">Рабочие программы</a>
                 </li>
                 <li class="nta_active-podmenu"><a href="#">Предложения</a>
                     <ul class="nta_podmenu">
-                        <li class="nta_active"><a href="#">Предложения</a></li>
-                        <li><a href="#">Рабочие программы</a></li>
-                        <li><a href="#">Слушителям</a></li>
-                        <li><a href="#">Наши ценности</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="programms.html">Рабочие программы</a></li>
+                        <li><a href="listeners.html">Слушителям</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Слушателям</a></li>
+                <li><a href="listeners.html">Слушателям</a></li>
                 <li class="nta_active-podmenu"><a href="#">Наши ценности</a>
                     <ul class="nta_podmenu">
                         <li><a href="#">Наши партнеры</a></li>
                         <li><a href="#">Наши преподаватели</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
+        <div class="nta_main-image">
+            <div class="nta_main-image__wrapper">
+                <picture>
+                    <source media="(max-width: 480px)"
+                        srcset="img/header-main-1x-mobile.png 1x, img/header-main-2x-mobile.png 2x">
+                    <img src="img/header-main-1x.png" srcset="img/header-main-1x.png 1x, img/header-main-2x.png 2x"
+                        alt="фото главной страницы">
+                </picture>
+
+                <div class="nta_main-image__content">
+                    <div class="nta_main-image__content-block">
+                        <img src="img/academy_logo-small.svg" alt="logo">
+                        <p>Строим карьеру.<br>Создаём будущее</p>
+                    </div>
+                    <div class="nta_main-image__content-block">
+                        <img src="img/academy_logo-small.svg" alt="logo">
+                        <p>Люди. Развитие. Успех</p>
+                    </div>
+                    <div class="nta_main-image__content-block">
+                        <img src="img/academy_logo-small.svg" alt="logo">
+                        <p>Сильная команда — сильная компания</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
     <main>
         <div class="nta_double-wrap">
@@ -103,8 +136,78 @@
         </div>
     </main>
     <footer>
-
+        <div class="footer-block">
+            <div class="footer-block__copyright">
+                <p>© 2001-2026 «Академия успеха»</p>
+            </div>
+        </div>
     </footer>
+    <div class="mobile-menu">
+        <div class="mobile-menu__top">
+            <a href="/" class="mobile-menu__logo">
+                <img src="img/logo.svg" alt="Академия профессионального успеха">
+            </a>
+
+            <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item mobile-menu__item--has-dropdown">
+                    <div class="mobile-menu__row">
+                        <a href="programms.html" class="mobile-menu__link">Рабочие программы</a>
+
+                        <button class="mobile-menu__toggle" type="button" aria-expanded="false"
+                            aria-label="Открыть подменю">
+                            <span class="mobile-menu__arrow"></span>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu__dropdown">
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="programms.html">Рабочие программы</a></li>
+                        <li><a href="listeners.html">Слушителям</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu__item mobile-menu__item--has-dropdown">
+                    <div class="mobile-menu__row">
+                        <a href="#" class="mobile-menu__link">Расписание</a>
+
+                        <button class="mobile-menu__toggle" type="button" aria-expanded="false"
+                            aria-label="Открыть подменю">
+                            <span class="mobile-menu__arrow"></span>
+                        </button>
+                    </div>
+
+                    <ul class="mobile-menu__dropdown">
+                        <li><a href="#">Наши партнеры</a></li>
+                        <li><a href="#">Наши преподаватели</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a href="listeners.html">Слушателям</a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a href="reviews.html">Отзывы</a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="mobile-menu__bottom">
+            <a href="#" class="mobile-menu__login">Войти</a>
+        </div>
+    </div>
 </body>
 
 </html>
