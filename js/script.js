@@ -327,4 +327,21 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMenu();
     }
   });
+
+  // открытие/закрытие дерева в библиотеке
+  const triggers = document.querySelectorAll(".library-tree__trigger");
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const parentItem = trigger.closest(".library-tree__item");
+      const content = parentItem.querySelector(
+        ":scope > .library-tree__content",
+      );
+
+      if (!content) return;
+
+      trigger.classList.toggle("is-open");
+      content.classList.toggle("is-open");
+    });
+  });
 });

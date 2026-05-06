@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
+    <title>Demo</title>
     <link rel="stylesheet" href="scss/reset.css">
     <link rel="stylesheet" href="scss/swiper-bundle.min.css">
     <script src="js/swiper-bundle.min.js" defer></script>
@@ -54,32 +54,6 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
-        <div class="nta_main-image">
-            <div class="nta_main-image__wrapper">
-                <picture>
-                    <source media="(max-width: 480px)"
-                        srcset="img/header-main-1x-mobile.png 1x, img/header-main-2x-mobile.png 2x">
-                    <img src="img/header-main-1x.png" srcset="img/header-main-1x.png 1x, img/header-main-2x.png 2x"
-                        alt="фото главной страницы">
-                </picture>
-
-                <div class="nta_main-image__content">
-                    <div class="nta_main-image__content-block">
-                        <img src="img/academy_logo-small.svg" alt="logo">
-                        <p>Строим карьеру.<br>Создаём будущее</p>
-                    </div>
-                    <div class="nta_main-image__content-block">
-                        <img src="img/academy_logo-small.svg" alt="logo">
-                        <p>Люди. Развитие. Успех</p>
-                    </div>
-                    <div class="nta_main-image__content-block">
-                        <img src="img/academy_logo-small.svg" alt="logo">
-                        <p>Сильная команда — сильная компания</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </header>
     <main>
         <div class="nta_double-wrap">
@@ -112,13 +86,102 @@
                 </div>
             </div>
             <div class="nta_main-wrapper">
-                <div class="nta_not-found">
-                    <h1>404</h1>
-                    <p>Данная страница не нейдена.<br>
-                        Проверьте ссылку или вернитесь на главную</p>
-                    <a href="/">На главную</a>
-                </div>
+                <h1>Наша библиотека</h1>
+                <div class="library-block-list">
+                    <ul class="library-tree">
+                        <li class="library-tree__item">
+                            <button class="library-tree__trigger">
+                                <span>Уровень 1</span>
+                            </button>
 
+                            <ul class="library-tree__content">
+                                <li class="library-tree__item">
+                                    <button class="library-tree__trigger">
+                                        <span>Уровень 2</span>
+                                    </button>
+
+                                    <ul class="library-tree__content">
+                                        <li class="library-tree__item">
+                                            <button class="library-tree__trigger">
+                                                <span>Уровень 3</span>
+                                            </button>
+
+                                            <ul class="library-tree__content">
+                                                <li class="library-tree__item">
+                                                    <button class="library-tree__trigger">
+                                                        <span>Уровень 4</span>
+                                                    </button>
+
+                                                    <ul class="library-tree__content">
+                                                        <li class="library-tree__item">
+                                                            <div class="library-tree__leaf">Уровень 5</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="library-tree__item">
+                                            <button class="library-tree__trigger">
+                                                <span>Уровень 3.1</span>
+                                            </button>
+
+                                            <ul class="library-tree__content">
+                                                <li class="library-tree__item">
+                                                    <button class="library-tree__trigger">
+                                                        <span>Уровень 4.1</span>
+                                                    </button>
+
+                                                    <ul class="library-tree__content">
+                                                        <li class="library-tree__item">
+                                                            <div class="library-tree__leaf">Уровень 5.1</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="library-tree__item">
+                            <button class="library-tree__trigger">
+                                <span>Уровень 1</span>
+                            </button>
+
+                            <ul class="library-tree__content">
+                                <li class="library-tree__item">
+                                    <button class="library-tree__trigger">
+                                        <span>Уровень 2</span>
+                                    </button>
+
+                                    <ul class="library-tree__content">
+                                        <li class="library-tree__item">
+                                            <div class="library-tree__leaf">
+                                                Уровень 3
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="library-tree__item">
+                            <button class="library-tree__trigger">
+                                <span>Уровень 1</span>
+                            </button>
+
+                            <ul class="library-tree__content">
+                                <li class="library-tree__item">
+                                    <div class="library-tree__leaf">
+                                        Уровень 2
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
@@ -192,7 +255,7 @@
         </nav>
 
         <div class="mobile-menu__bottom">
-            <a href="#" class="mobile-menu__login">Войти</a>
+            <a href="acount.html" class="mobile-menu__login">Войти</a>
         </div>
     </div>
 </body>

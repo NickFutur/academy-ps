@@ -138,6 +138,16 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 480px) {
+  .nta_header .nta_main-image__wrapper img {
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+.nta_header .nta_main-image__wrapper .nta_main-image--object-left {
+  -o-object-position: left;
+     object-position: left;
+}
 .nta_header .nta_main-image__content {
   position: absolute;
   width: 100%;
@@ -499,6 +509,8 @@ html {
 .nta_double-wrap .nta_dop-wrapper .nta_left-menu ul li a {
   font-family: "GothamPro", sans-serif;
   font-weight: 400;
+  display: inline-block;
+  width: 100%;
   font-size: 15px;
   line-height: 140%;
   text-decoration: none;
@@ -760,7 +772,7 @@ html {
   margin-bottom: 0px;
 }
 .nta_double-wrap .nta_main-wrapper .nta_not-found a {
-  background: #eb492a;
+  background: #ca305f;
   border-radius: 100px;
   width: 180px;
   height: 46px;
@@ -778,7 +790,7 @@ html {
   line-height: normal;
 }
 .nta_double-wrap .nta_main-wrapper .nta_not-found a:hover {
-  background: #a21e05;
+  background: #b03057;
   opacity: 1;
   color: #fff;
   transition: all 0.3s ease;
@@ -852,15 +864,15 @@ html {
 }
 .nta_login-form-wrap .nta_login-form .nta_email input.error,
 .nta_login-form-wrap .nta_login-form .nta_password input.error {
-  border-color: #eb492a;
-  color: #eb492a;
+  border-color: #ca305f;
+  color: #ca305f;
 }
 .nta_login-form-wrap .nta_login-form .nta_email input.error::-moz-placeholder, .nta_login-form-wrap .nta_login-form .nta_password input.error::-moz-placeholder {
-  color: #eb492a;
+  color: #ca305f;
 }
 .nta_login-form-wrap .nta_login-form .nta_email input.error::placeholder,
 .nta_login-form-wrap .nta_login-form .nta_password input.error::placeholder {
-  color: #eb492a;
+  color: #ca305f;
 }
 .nta_login-form-wrap .nta_login-form .nta_email label,
 .nta_login-form-wrap .nta_login-form .nta_password label {
@@ -868,7 +880,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: #eb492a;
+  color: #ca305f;
   font-family: "GothamPro", sans-serif;
 }
 .nta_login-form-wrap .nta_login-form .nta_email label.show,
@@ -879,7 +891,7 @@ html {
   border-radius: 100px;
   width: 100%;
   height: 46px;
-  background: #eb492a;
+  background: #ca305f;
   color: #fff;
   border: none;
   outline: none;
@@ -888,14 +900,14 @@ html {
   font-size: 16px;
 }
 .nta_login-form-wrap .nta_login-form .nta_submit:hover {
-  background: #a21e05;
+  background: #b03057;
   border: none;
   outline: none;
 }
 .nta_login-form-wrap .nta_login-form .nta_submit:active, .nta_login-form-wrap .nta_login-form .nta_submit:focus {
   background: #fff;
-  border: 1px solid #eb492a;
-  color: #eb492a;
+  border: 1px solid #b03057;
+  color: #b03057;
 }
 
 main .nta_double-wrap .nta_main-wrapper .nta_reviews-wrap {
@@ -966,6 +978,64 @@ main .nta_double-wrap .nta_main-wrapper .nta_main-review p {
 .nta_double-wrap .nta_main-wrapper .nta_contacts-map iframe {
   border-radius: 20px;
   overflow: hidden;
+}
+
+.library-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.library-tree__item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.library-tree__trigger, .library-tree__leaf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 5px;
+  border-radius: 0px;
+  border: none;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  color: #000;
+  font-size: 16px;
+  line-height: 140%;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.library-tree__trigger {
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.library-tree__trigger::after {
+  content: "+";
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+.library-tree__trigger:hover {
+  background: #222;
+  border-color: #222;
+  color: #ffd503;
+  border-radius: 5px;
+}
+.library-tree__trigger.is-open::after {
+  transform: rotate(45deg);
+}
+.library-tree__content {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 24px;
+  padding-left: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+.library-tree__content.is-open {
+  display: flex;
 }
 
 h1,

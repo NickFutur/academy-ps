@@ -44,6 +44,8 @@
           a {
             font-family: $font-primary;
             font-weight: $fw-regular;
+            display: inline-block;
+            width: 100%;
             font-size: 15px;
             line-height: 140%;
             text-decoration: none;

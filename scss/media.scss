@@ -302,6 +302,12 @@
     .nta_main-image {
       &__wrapper {
         .nta_main-image__content {
+          &-block:nth-child(1) {
+            top: 343px;
+          }
+          &-block:nth-child(3) {
+            top: 287px;
+          }
           &-block--program:nth-child(1) {
             left: 21%;
             top: 230px;
@@ -325,20 +331,20 @@
             bottom: 120px;
             right: 5%;
           }
-           &-block--reviews:nth-child(1) {
+          &-block--reviews:nth-child(1) {
             left: 10%;
           }
           &-block--reviews:nth-child(2) {
             left: 30%;
           }
-           &-block--contacts:nth-child(1) {
+          &-block--contacts:nth-child(1) {
             left: 11%;
           }
           &-block--contacts:nth-child(2) {
-        right: 30%;
+            right: 30%;
           }
           &-block--contacts:nth-child(3) {
-        right: 81px;
+            right: 81px;
           }
         }
       }
@@ -347,7 +353,7 @@
   .nta_double-wrap {
     .nta_dop-wrapper {
       width: 100%;
-      
+
       align-self: flex-end;
       padding: 0px 16px;
 
@@ -380,22 +386,20 @@
   .nta_header {
     .nta_main-image {
       height: 493px;
-    }
-    .nta_main-image__content-block:nth-child(1) {
-      top: 262px;
-      left: 18px;
-    }
-    .nta_main-image__content-block:nth-child(2) {
-      top: 34px;
-      left: 56px;
-    }
-    .nta_main-image__content-block:nth-child(3) {
-      top: 362px;
-      right: 19px;
-    }
-    .nta_main-image {
       &__wrapper {
         .nta_main-image__content {
+          &-block:nth-child(1) {
+            top: 262px;
+            left: 18px;
+          }
+          &-block:nth-child(2) {
+            top: 10px;
+            left: 56px;
+          }
+          &-block:nth-child(3) {
+            top: 362px;
+            right: 19px;
+          }
           &-block--program:nth-child(1) {
             left: 34px;
             top: 201px;
@@ -410,7 +414,7 @@
           }
           &-block--listeners:nth-child(1) {
             left: 25px;
-            top: 43px;
+            top: 23px;
           }
           &-block--listeners:nth-child(2) {
             bottom: 172px;
@@ -436,8 +440,8 @@
             top: auto;
             bottom: 54px;
           }
-           &-block--contacts:nth-child(1) {
-            left:17px;
+          &-block--contacts:nth-child(1) {
+            left: 17px;
             top: 43px;
           }
           &-block--contacts:nth-child(2) {
@@ -453,14 +457,13 @@
     }
   }
 
-.nta_double-wrap{
-    .nta_main-wrapper{
-         .nta_contacts-map{
-                height: 346px;
-            }
+  .nta_double-wrap {
+    .nta_main-wrapper {
+      .nta_contacts-map {
+        height: 346px;
+      }
     }
-}
-
+  }
 }
 
 @media (max-width: 320px) {

@@ -1,0 +1,73 @@
+@use "fonts";
+@use "variables" as *;
+
+.library-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__trigger,
+  &__leaf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 0px;
+    border: none;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    color: #000;
+    font-size: 16px;
+    line-height: 140%;
+    border-bottom: 1px solid rgba(0, 0, 0);
+  }
+
+  &__trigger {
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      border-color 0.3s ease;
+
+    &::after {
+      content: "+";
+      font-size: 22px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: $black;
+      border-color: $black;
+      color: $yellow;
+      border-radius: 5px;
+    }
+
+    &.is-open {
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 24px;
+    padding-left: 18px;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+    &.is-open {
+      display: flex;
+    }
+  }
+}
