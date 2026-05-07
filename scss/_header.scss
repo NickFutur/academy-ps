@@ -147,7 +147,7 @@ html {
       left: 0;
       display: flex;
 
-      &-block:nth-child(1) {
+      &-block--main:nth-child(1) {
         position: absolute;
         top: 301px;
         left: 124px;
@@ -155,7 +155,7 @@ html {
           left: 15%;
         }
       }
-      &-block:nth-child(2) {
+      &-block--main:nth-child(2) {
         position: absolute;
         top: 41px;
         left: 329px;
@@ -163,7 +163,7 @@ html {
           left: 38%;
         }
       }
-      &-block:nth-child(3) {
+      &-block--main:nth-child(3) {
         position: absolute;
         top: 143px;
         right: 43px;

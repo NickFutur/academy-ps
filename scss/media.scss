@@ -302,10 +302,10 @@
     .nta_main-image {
       &__wrapper {
         .nta_main-image__content {
-          &-block:nth-child(1) {
+          &-block--main:nth-child(1) {
             top: 343px;
           }
-          &-block:nth-child(3) {
+          &-block--main:nth-child(3) {
             top: 287px;
           }
           &-block--program:nth-child(1) {
@@ -388,15 +388,15 @@
       height: 493px;
       &__wrapper {
         .nta_main-image__content {
-          &-block:nth-child(1) {
+          &-block--main:nth-child(1) {
             top: 262px;
             left: 18px;
           }
-          &-block:nth-child(2) {
+          &-block--main:nth-child(2) {
             top: 10px;
             left: 56px;
           }
-          &-block:nth-child(3) {
+          &-block--main:nth-child(3) {
             top: 362px;
             right: 19px;
           }
